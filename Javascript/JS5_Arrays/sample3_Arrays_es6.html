@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // By using forEach statement we can't create new array, we can overcome by using map statement.
+
+         var friends = ["Mohan Krishna", "Raghu Sai", "Bhanu Prasad", "Hari Krishna", "Lokesh"];
+
+        // here function is a unanimus function;    friendName is act like a container for the array and it is imaginary variable.
+        // we can use fat arrow function(=>) in the place of function in the below. 
+        // friends.forEach(function(friendName){
+        //     console.log(friendName)
+        //  })
+        //   we can add aurguments like index and Array
+        //  friends.forEach(function(friendName,index,array){
+            // document.write(friendName+index+"<br>")
+            // document.write(array+"<br>")
+        //     document.write(friendName+" is Part of the team India....with the team Name.."+array+"<br>")
+        //  })
+
+
+            friends.map((friendName,index,array)=>{
+            //     console.log(friendName);
+            //  console.log(index);
+             console.log(array);
+            })
+            
+
+            var players = ["Rohit","Rahul","Raina","Dhoni","Pant","Hardik","Kohli","Gill"];
+            var allIndianPlayers = players.map((playerName,index,array)=>{
+                return playerName+" -INDIA"
+            })
+            console.log(allIndianPlayers)
+    </script>
+</body>
+</html>

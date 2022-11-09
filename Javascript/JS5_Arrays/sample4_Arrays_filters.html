@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // find statement is used to find the value which is in the array and having perticular no.of characters.
+        // if we want to find perticular no.of character value in the array even though the array consist two values 
+        // for perticular no.of characters it displays only one.
+        var friends = ["Mohan", "Krishna", "Raghu", "Sai", "Bhanu", "Prasad", "Hari", "Lokesh"];
+        var char4friend = friends.find((friendName) => {
+            return friendName.length == 4
+        })
+        console.log(char4friend)
+
+        // filter statement is used filter the array and overcome the disadvantag of find statement.
+        // By using filter for perticular no.of characters is having more than one string in the array it can displays.
+        var friends = ["Mohan", "Krishna", "Raghu", "Sai", "Bhanu", "Prasad", "Hari", "Lokesh"];
+        var char6friend = friends.filter((friendName) => {
+            return friendName.length == 6
+        })
+        console.log(char6friend)
+    </script>
+</body>
+
+</html>

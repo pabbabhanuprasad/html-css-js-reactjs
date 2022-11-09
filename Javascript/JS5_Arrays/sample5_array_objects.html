@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var players = [
+        { name: "Rohit" },
+        { name: "Kohli" },
+        { name: "Rahul" },
+        { name: "Pant" },
+        { name: "Hardik" },
+        { name: "Dhoni" },
+        { name: "Jadeja" },
+        { name: "Samson" }
+        ]; // to display the all players in the array
+       players.forEach((player)=>{
+        document.write(player.name+"<br>")
+       })
+
+       var players = [
+        { name: "Rohit",runs:15 },
+        { name: "Kohli",runs:20 },
+        { name: "Rahul",runs:35},
+        { name: "Pant" ,runs:33},
+        { name: "Hardik" ,runs:26},
+        { name: "Dhoni",runs:56},
+        { name: "Jadeja",runs:41 },
+        { name: "Samson",runs:29 },
+        { name: "Surya Kumar Yadhav",runs:66}
+        ]; // to display condition based data
+       var above50 = players.filter((player) => {
+        return player.runs > 50;
+       });
+       console.log(above50);
+
+       var below50 = players.filter((player) => {
+        return player.runs < 50;
+       });
+       console.log(below50);
+    </script>
+</body>
+
+</html>

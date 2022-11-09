@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         var players = [
+        { name: "Rohit",runs:15 },
+        { name: "Kohli",runs:20 },
+        { name: "Rahul",runs:35},
+        { name: "Pant" ,runs:33},
+        { name: "Hardik" ,runs:26},
+        { name: "Dhoni",runs:56},
+        { name: "Jadeja",runs:41 },
+        { name: "Samson",runs:29 },
+        { name: "Surya Kumar Yadhav",runs:66}
+        ];
+        // statement1:All platers scored above 50 runs - false
+        // In an Array every value should satisfy the condition we will use Every statement.
+        var statement = players.every((player)=>{
+            return player.runs >=30;
+        })
+        console.log("Every statement : -",statement)
+        // statement2: At least 1 player scored above 50 runs - true.
+        // In an Array any value should satisfy the condition we will use some statement.
+        var players = [
+        { name: "Rohit",runs:15 },
+        { name: "Kohli",runs:20 },
+        { name: "Rahul",runs:35},
+        { name: "Pant" ,runs:33},
+        { name: "Hardik" ,runs:26},
+        { name: "Dhoni",runs:56},
+        { name: "Jadeja",runs:41 },
+        { name: "Samson",runs:29 },
+        { name: "Surya Kumar Yadhav",runs:66}
+        ];
+        var statementvalue=players.some((player)=>{
+            return player.runs > 50
+        })
+        console.log(statementvalue)
+
+        // If we want to calculate total score of the all players,we will Reduce statement.
+        var players = [
+        { name: "Rohit",runs:15 },
+        { name: "Kohli",runs:20 },
+        { name: "Rahul",runs:35},
+        { name: "Pant" ,runs:33},
+        { name: "Hardik" ,runs:26},
+        { name: "Dhoni",runs:56},
+        { name: "Jadeja",runs:41 },
+        { name: "Samson",runs:29 },
+        { name: "Surya Kumar Yadhav",runs:66}
+        ];
+        var totalScore = players.reduce((initialValue,player)=>{
+            console.log("Initial Value",initialValue)
+            console.log("player",player)
+            if(initialValue.runs){
+                return initialValue.runs+player.runs
+            }else{
+                return initialValue+player.runs
+            }
+           
+        })
+        console.log(totalScore)
+
+        var numbers = [1,2,3,4,5,6,7,8]
+        var total=numbers.reduce((initialvalue,no)=>{
+            return initialvalue+no
+        })
+        console.log(total)
+
+    </script>
+</body>
+</html>

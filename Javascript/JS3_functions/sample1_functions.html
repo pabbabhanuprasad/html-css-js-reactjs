@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // () paranthasys
+        // {} curly braces 
+
+        // creating a function: Type-1 
+        function sayHello() {
+            console.log("Hello world !!!")
+        }
+
+        sayHello()
+
+        // creating function: Type-2
+        var sayHello = function () {
+            console.log("say hello from functions variables..")
+        }
+        sayHello()
+
+
+        //  Function is stand alone is called "Function" , Function along with Object is called "Method".
+
+        // creating function: Type-3
+        //    var sayHello = function helloworld(){
+        //     console.log("Hello world from say Hello")
+        //    }  
+        //    sayHello()  
+
+        function helloworld() {
+            console.log("Hello world from say Hello")
+        } 
+        var sayHello = helloworld
+
+        sayHello();
+        helloworld();
+
+        // latest version atma script (In this version we don't need to use "Function" key word)
+        // This method is called Arrow functions or Fat Arrow Functions
+        var sayHello = ()=>{
+            console.log("Hello from Javascript")
+        }
+        sayHello()
+    </script>
+</body>
+
+</html>
