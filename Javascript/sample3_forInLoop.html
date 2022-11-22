@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document1</title>
+</head>
+<body>
+    <script>
+        console.log("From outside",this)
+        var person = {
+            fname:"Bhanu",
+            lname:"Prasad",
+            email:"bhanuprasad.com",
+            phone:776655988,
+            city:"Undrajavaram",
+            language:"Telugu",
+            fullname: function(){
+                console.log("from object:",this)
+                console.log(this.fname+" "+this.lname)
+            // here fullname is also a property if we run this we will get it as property    
+            }
+        };
+        person.fullname()
+        // document.write(person.fname+"<br>"+
+        // person.lname+"<br>"+
+        // person.email+"<br>"+
+        // person.phone+"<br>"+
+        // person.city+"<br>"+
+        // person.language+"<br>")
+
+        // for(a in person){
+        //     document.write(a+": "+person[a]+"<br>");
+        // }
+
+        for(a in person){
+            document.write(person[a]+"<br>");
+        }
+         // If we don't want to fullname in the output
+
+         for(a in person){
+            if(a != "fullname"){
+                document.write(a+": "+person[a]+"<br>");
+            }
+         }
+        //  If we don't want to display phone
+        for(a in person){
+            if(a != "fullname" && a !== "phone" && a !=="language"){
+                document.write(a+": "+person[a]+"<br>");
+            }
+         }
+
+
+
+    </script>
+</body>
+</html>

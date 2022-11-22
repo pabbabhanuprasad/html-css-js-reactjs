@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document1</title>
+</head>
+
+<body>
+    <h2>Hello from Java script</h2>
+    <script>
+        var person = {
+            myname: "Bhanu",
+            email: "bhanuprasad.com",
+            mobile: 664748939,
+        };
+        person['city'] = "Undrajavaram"
+        person['language'] = "Telugu"  //  Adding a Proprty with [] notation.
+        document.write("My name is Bhanu Prasad<br>");
+        document.write(person.myname + "<br>" + person.email + "<br>" + person.mobile + "<br><br><br><br>")
+
+        //if we want to display a key also
+        document.write("myname:" + person.myname + "<br> email:" + person.email + "<br> mobile:" + person.mobile + "<br><br>")
+        document.write("myname:Prasad" + person.myname + "<br> email:Prasad" + person.email + "<br> mobile:" + person.mobile + "<br><br><br><br>")
+        
+        // for(var a in person){} in this way we also given
+        for (a in person) {
+            console.log(a)
+        }
+        for(var a in person){
+            document.write(a+" : "+person[a]+"<br>");
+        }
+        // console.log(person);
+    </script>
+</body>
+
+</html>
