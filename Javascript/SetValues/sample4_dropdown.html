@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="Laptop">Laptop Name : </label>
+        <select id="LaptopName" multiple>
+            <option value="HP">HP</option>
+            <option value="Dell">Dell</option>
+            <option value="Lenovo">Lenovo</option>
+            <option value="Asus">Asus</option>
+            <option value="Apple">Apple</option>
+        </select>
+        <button onclick="setLaptopName()" type="button">Set Laptop</button>
+    </form>
+    <script>
+        function setLaptopName(){
+            // var selectedElementOptions = document.getElementsByTagName("option");
+            var selectedElementOptions = document.getElementById("LaptopName").children
+            var LaptopVal = ["Lenovo",'HP'];
+
+            // console.log(selectedElementOptions)
+
+            for(i=0;i<selectedElementOptions.length;i++){
+                var check = LaptopVal.find((val)=>val == selectedElementOptions[i].value)
+                if(check){
+                    selectedElementOptions[i].selected = true
+                }
+            }
+            // document.getElementById("stateName").value = stateVal;
+        }
+    </script>
+</body>
+</html>

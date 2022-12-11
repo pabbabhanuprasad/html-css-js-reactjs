@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th rowspan="2">Id</th>
+                <th rowspan="2" style="width:150px">title</th>
+                <th rowspan="2">Price</th>
+                <th rowspan="2" style="width:150px">Desciption</th>
+                <th rowspan="2">Category</th>
+                <th rowspan="2" style="width:150px">Image</th>
+                <th colspan="2" rowspan="1">Rating</th>
+                <th rowspan="2">Edit</th>
+                <th rowspan="2">Delete</th>
+            </tr>
+            <th>Rate</th>
+            <th>Count</th>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script src="./data.js"></script>
+    <script>
+        function displayProducts(products) {
+            products.forEach((product) => {
+                console.log(product)
+                var myTr = document.createElement("tr");
+                for (a in product) {
+                    var myTd = document.createElement("td");
+                    myTd.innerHTML = product[a]
+                    if (a !== "image" && a !== "rating") {
+                        myTd.innerHTML = product[a];
+                        myTr.appendChild(myTd);
+
+                    } else if (a == "image") {
+                        //this will execute only for images 
+                        var myImg = document.createElement("img")
+                        myImg.setAttribute("src", product[a]);
+                        // myImg.style.width="100px";
+                        myTd.appendChild(myImg);
+                        myTr.appendChild(myTd);
+
+                    } else if (a == "rating") {
+                        //this will execute only for rating 
+                        // var results = ""
+                        for(b in product[a]){
+                           var myNtd = document.createElement("td")
+                           myNtd.innerHTML = product[a][b]
+                           myTr.appendChild(myNtd);
+                        }
+                        // myTd.innerHTML = results
+                    }
+                }
+                document.querySelector("tbody").appendChild(myTr)
+            })
+        }
+        displayProducts()
+    </script>
+</body>
+
+</html>

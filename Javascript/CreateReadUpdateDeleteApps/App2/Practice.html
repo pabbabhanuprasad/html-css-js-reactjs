@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body {
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            font-family: sans-serif;
+        }
+
+        .form {
+            width: 400px;
+            margin: 20vh auto 0 auto;
+            padding: 20px;
+            background-color: whitesmoke;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        .h1 {
+            color: #0f2027;
+            text-align: center;
+        }
+
+        .button {
+            padding: 10px;
+            margin-top: 10px;
+            width: 100%;
+            color: white;
+            background-color: blue;
+            border: none;
+            border-radius: 4px;
+        }
+
+        .input-control {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-control input {
+            border: 2px solid grey;
+            border-radius: 4px;
+            display: block;
+            font-size: 12px;
+            padding: 10px;
+            width: 94%;
+        }
+
+        .input-control input {
+            outline: 0
+        }
+
+        .input-control.success input {
+            border-color: #09c372;
+        }
+
+        .input-control.error input {
+            border-color: #ff3860;
+        }
+
+        .input-control error {
+            color: #ff3860;
+            font-size: 9px;
+            height: 13px;
+        }
+    </style>
+</head>
+
+<body class="body">
+    <div class="container">
+        <form class="form">
+            <h1 class="h1">Registration</h1>
+            <div class="input-control">
+                <lable for="fname">First name:</lable>
+                <input id="fname" name="fname" type="text" placeholder="First Name" onkeyup="checkUsersInput()">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <lable for="lname">Last Name</lable>
+                <input id="lname" name="lname" type="text" placeholder="Last Name" onkeyup="checkUsersInput()">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <lable for="email">Email</lable>
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <lable for="password">Password</lable>
+                <input id="password" name="password" type="text" placeholder="Password" onkeyup="checkUsersInput()">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <lable for="confirm password">confirm password</lable>
+                <input id="confirm" name="confirm password" type="text" placeholder="confirm password"
+                    onkeyup="checkUsersInput()">
+                <div class="error"></div>
+            </div>
+            <button type="submit" onclick="addUser()" class="button" disabled>Sign Up</button>
+        </form>
+    </div>
+    <script>
+        function checkUsersInput() {
+            console.log("checkUserInput() called")
+            var forminputs = document.getElementById("fname").value;
+            var forminputs = document.getElementById("lname").value;
+            var forminputs = document.getElementById("email").value;
+            var forminputs = document.getElementById("password").value;
+            var forminputs = document.getElementById("confirm").value;
+            console.log(forminputs);
+
+            
+        }
+        function validateform(){
+            var formusers = {
+                fname:"",
+                lname:"",
+                email:"",
+                password:"",
+                confirm:""
+            }
+            for(b in formuser){
+                formuser[b] = document.getElementById(b).value
+            }
+        }
+    </script>
+</body>
+
+</html>

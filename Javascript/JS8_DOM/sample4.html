@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul></ul>
+    <script>
+        for (i = 0; i < 10; i++) {
+            // if we want some number of headings
+            var myheading = document.createElement("h1");
+            // if we want add above line in body
+            document.body.appendChild(myheading);
+            //  if we give above command again and again it can be displayed in one time only,because it is overrided
+            // To avoid that we are using for loop.
+        }
+        var allUsers = [
+            {
+                "id": 101,
+                "email": "ggyggagb@bhfvbfv.net"
+            },
+            {
+                "id": 102,
+                "email": "ggyggagb@bhfvbfv.net"
+            },
+            {
+                "id": 103,
+                "email": "ggyggagb@bhfvbfv.net"
+            },
+            {
+                "id": 104,
+                "email": "ggyggagb@bhfvbfv.net"
+            },
+            {
+                "id": 105,
+                "email": "ggyggagb@bhfvbfv.net"
+            }, {
+                "id": 106,
+                "email": "ggyggagb@bhfvbfv.net"
+            },
+            {
+                "id": 107,
+                "email": "ggyggagb@bhfvbfv.net"
+            },
+            {
+                "id": 108,
+                "email": "ggyggagb@bhfvbfv.net"
+            },
+            {
+                "id": 109,
+                "email": "ggyggagb@bhfvbfv.net"
+            },
+            {
+                "id": 110,
+                "email": "ggyggagb@bhfvbfv.net"
+            }
+        ];  //to display the array
+        console.log(allUsers.length)
+        // allUsers.forEach((user) => {
+        //     var myheading = document.createElement("h1");
+        //     myheading.innerHTML = user.email;
+        //     document.body.appendChild(myheading);
+        // })
+
+        // if we want put the email in list we created a list
+        allUsers.forEach((user)=>{
+            var myLi = document.createElement("li");
+            myLi.innerHTML = user.email;
+            document.querySelector("ul").appendChild(myLi)
+        })
+
+
+    </script>
+
+</body>
+
+</html>

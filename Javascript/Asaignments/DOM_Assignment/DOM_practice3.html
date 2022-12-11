@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+ <table border="2px">
+  <thead>
+   <th>Fname</th>
+   <th>Lname</th>
+   <th>Telephone</th>
+   <th>Address</th>
+   <th>City</th>
+   <th>State</th>
+   <th>Zip</th>
+   <th>delete</th>
+  </thead>
+  <tbody>
+
+  </tbody>
+ </table>
+
+  <script>
+    var EmployeeDetails = [
+      {
+        "fname": "Munazza",
+        "lname": "Ward",
+        "tel": "(659)396-0161",
+        "address": "8567 Magna Ln",
+        "city": "Slidell",
+        "state": "MS",
+        "zip": 89090
+      },
+      {
+        "fname": "Ade",
+        "lname": "Clinger",
+        "tel": "(273)354-5061",
+        "address": "7086 Donec Dr",
+        "city": "Ferndale",
+        "state": "PA",
+        "zip": 33336
+      },
+      {
+        "fname": "Esther",
+        "lname": "Clifford",
+        "tel": "(964)983-7171",
+        "address": "4685 Et Rd",
+        "city": "Tobyhanna",
+        "state": "MA",
+        "zip": 31757
+      },
+      {
+        "fname": "Hussain",
+        "lname": "Chase",
+        "tel": "(944)906-7521",
+        "address": "5667 Amet Rd",
+        "city": "Midlothian",
+        "state": "OR",
+        "zip": 63666
+      },
+      {
+        "fname": "Conrade",
+        "lname": "Camiling",
+        "tel": "(280)798-8304",
+        "address": "862 Sagittis Rd",
+        "city": "Wahiawa",
+        "state": "OK",
+        "zip": 86384
+      },
+      {
+        "fname": "Frances",
+        "lname": "Ramsey",
+        "tel": "(571)532-7156",
+        "address": "9098 Facilisis Ct",
+        "city": "Streamwood",
+        "state": "AK",
+        "zip": 86262
+      },
+      {
+        "fname": "Natasha",
+        "lname": "Lawrence",
+        "tel": "(958)777-9729",
+        "address": "7556 Nec Ln",
+        "city": "Gaithersburg",
+        "state": "MO",
+        "zip": 54623
+      },
+      {
+        "fname": "Sutman",
+        "lname": "Wathen",
+        "tel": "(989)797-5132",
+        "address": "4133 Id Rd",
+        "city": "Catlettsburg",
+        "state": "CO",
+        "zip": 34750
+      },
+      {
+        "fname": "Eva",
+        "lname": "Feger",
+        "tel": "(415)513-9686",
+        "address": "3748 Pulvinar St",
+        "city": "West Warwick",
+        "state": "AZ",
+        "zip": 85512
+      },
+      {
+        "fname": "Juan",
+        "lname": "Lavallee",
+        "tel": "(828)936-6749",
+        "address": "9849 Tellus Ln",
+        "city": "Seattle",
+        "state": "UT",
+        "zip": 73456
+      }
+    ]
+
+
+
+    // EmployeeDetails.forEach((employee)=>{
+    //   var myTr= document.createElement("tr")
+
+    //   for ( a in employee){
+    //     var myTd = document.createElement("td")
+    //     myTd.innerHTML = employee[a]
+    //     myTr.appendChild(myTd)
+    //   }
+    //   document.querySelector("tbody").appendChild(myTr)
+     
+
+    // })
+  </script>
+  <script>
+    var fillteredEmploy = []
+    function employeee(EmployeeDetails){
+      document.querySelector("tbody").innerHTML = ""
+      EmployeeDetails.forEach((employee,i)=>{
+      var myTr= document.createElement("tr")
+
+      for ( a in employee){
+        var myTd = document.createElement("td")
+        myTd.innerHTML = employee[a]
+        myTr.appendChild(myTd)
+      }
+      
+      var myTd = document.createElement("td")
+      var deletebtn =document.createElement("button")
+      deletebtn.innerHTML ="delete"
+      deletebtn.setAttribute("onclick","deleteEmployee("+i+")")
+      myTd.appendChild(deletebtn)
+      myTr.appendChild(myTd)
+     
+     
+     
+      document.querySelector("tbody").appendChild(myTr)
+     
+
+    })
+
+
+    }
+    
+    
+    function deleteEmployee(i){
+      if (fillteredEmploy.length == 0){
+        fillteredEmploy = EmployeeDetails.filter((items,index)=>{
+          return items.id != EmployeeDetails[i].id
+        })
+      }
+      else{
+        fillteredEmploy = fillteredEmploy.filter((items,index)=>{
+          return items.id != fillteredEmploy[i].id
+        })
+      }
+      employeee(fillteredEmploy)
+    }
+
+
+
+    employeee(EmployeeDetails)
+  </script>
+</body>
+
+</html>

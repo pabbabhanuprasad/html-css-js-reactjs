@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #formContent {
+            width: 20%;
+            float: left;
+        }
+
+        #userTable {
+            width: 80%;
+            float: left;
+        }
+
+        table {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="formContent">
+        <form>
+            <label for="university">University : </label>
+            <input type="text" name="" id="university"> <br>
+
+            <label for="institute">Institute : </label>
+            <input type="text" name="" id="institute"> <br>
+
+            <label for="branch">Branch</label>
+            <select name="" id="branch">
+                <option value="Civil">Civil</option>
+                <option value="Electrical">Electrical</option>
+                <option value="Mechanical">Mechanical</option>
+                <option value="CS">CS</option>
+                <option value="Communication">Communication</option>
+                <option value="IT">IT</option>
+            </select>
+
+            <br>
+            <label for="degree">Degree </label>
+            <select name="" id="degree">
+                <option value="BE">BE</option>
+                <option value="BTech">BTech</option>
+                <option value="MTech">MTech</option>
+            </select>
+            <br>
+            <label for="staus">Status : </label>
+            <input type="radio" name="status" value="completed"> Completed
+            <input type="radio" name="status" value="pursuing"> Pursuing <br>
+
+            <label for="cgpa">CGPA :</label>
+            <input type="number" name="" id="cgpa"> <br>
+
+            <label for="experience">Experience :</label>
+            <input type="number" name="" id="experience"> <br>
+
+            <label for="website">Website :</label>
+            <input type="text" name="" id="website"> <br>
+
+            <label for="doj">Date of Joining </label>
+            <input type="date" name="" id="doj"> <br>
+
+            <label for="subject">Subjects : </label> <br>
+            <input type="checkbox" name="subject" value="HTML"> HTML <br>
+            <input type="checkbox" name="subject" value="CSS"> CSS <br>
+            <input type="checkbox" name="subject" value="Javascript"> Javascript <br>
+            <input type="checkbox" name="subject" value="ReactJS"> ReactJS <br>
+
+            <button type="button" onclick="addUser()">Add User</button>
+            <button type="button" onclick="updateUser()">updateUser </button>
+
+        </form>
+
+    </div>
+    <div id="userTable">
+        <table border="1px">
+            <thead>
+                <tr>
+                    <th>University</th>
+                    <th>Institute</th>
+                    <th>Branch</th>
+                    <th>Degree</th>
+                    <th>Status</th>
+                    <th>CGPA</th>
+                    <th>Experience</th>
+                    <th>Website</th>
+                    <th>DOJ</th>
+                    <th>Subjects</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script>
+        //code for to create the form
+        var user = {
+            university: "",
+            institute: "",
+            branch: "",
+            degree: "",
+            status: "",
+            cgpa: "",
+            experience: "",
+            website: "",
+            doj: "",
+            subjects: [],
+        };
+
+        var users = JSON.parse(localStorage.getItem("Users"))
+        if (users == null) {
+            users = []
+        }
+        console.log(users)
+        // var users = []
+
+        function addUser() {
+           var user = readform() 
+
+            users.push(user);
+            // Storing all users in local storage
+            localStorage.setItem("Users", JSON.stringify(users))
+            displayUsers(users)
+            // console.log(user);
+            clearForm()
+        }
+
+
+        function clearForm() {
+            for (a in user) {
+                if (a !== "status" && a !== "subjects") {
+                    document.getElementById(a).value = ""
+                } else {
+                    var allCheckBoxes = document.getElementsByName("subject");
+                    var allStaus = document.getElementsByName("status");
+
+                    allCheckBoxes.forEach((cb) => {
+                        cb.checked = false
+                    })
+                    allStaus.forEach((as) => {
+                        as.checked = false
+                    })
+                }
+            }
+        }
+    </script>
+
+    <script>
+        // code for to read the form
+        function displayUsers(users) {
+            document.querySelector("tbody").innerHTML = ""
+            users.forEach((myUser, i) => {
+                var myTr = document.createElement("tr");
+                for (a in myUser) {
+                    var myTd = document.createElement("td");
+                    myTd.innerHTML = myUser[a]
+                    myTr.appendChild(myTd)
+                }
+
+                var editTd = document.createElement("td");
+                var editBtn = document.createElement("button");
+                editBtn.setAttribute("onclick", "editUser(" + i + ")");
+                editBtn.innerHTML = "EDIT";
+                editTd.appendChild(editBtn);
+                myTr.appendChild(editTd);
+
+                var deleteTd = document.createElement("td");
+                var deleteBtn = document.createElement("button");
+                deleteBtn.setAttribute("onclick", "deleteUser(" + i + ")");
+                deleteBtn.innerHTML = "DELETE";
+                deleteTd.appendChild(deleteBtn)
+                myTr.appendChild(deleteTd);
+
+
+                document.querySelector("tbody").appendChild(myTr)
+            })
+        }
+        displayUsers(users);
+
+    </script>
+
+    <SCript>
+        // CODE FOR DELETE OPERATION
+        function deleteUser(i) {
+            // if click on delete botton at perticular row that row will be deleted
+            users = users.filter((user, index) => i !== index);
+            // after deleting data will be stared in localStorage
+            localStorage.setItem("Users", users)
+            // trying to display the latest users
+            displayUsers(users)
+        }
+    </SCript>
+
+    <script>
+        var getIndex;
+        function editUser(i) {
+            getIndex=i;
+            var newUser = users[i]
+            console.log("string")
+            for (a in newUser) {
+                if (a !== "status" && a !== "subjects") {
+                    document.getElementById(a).value = newUser[a];
+
+                }
+            }
+        }
+    </script>
+
+    <script>
+        function updateUser(){
+        var user = readform() 
+
+            users[getIndex] = user
+            localStorage.setItem("Users", JSON.stringify(users))
+            displayUsers(users)
+        }
+    
+    </script>
+    <script>
+        function readform(){
+            for (a in user) {
+                if (a !== "status" && a !== "subjects") {
+                    user[a] = document.getElementById(a).value;
+                } else if (a == "subjects") {
+                    var allCheckBoxes = document.getElementsByName("subject");
+                    allCheckBoxes.forEach((element) => {
+                        if (element.checked) {
+                            user.subjects.push(element.value);
+                        }
+                    });
+                } else if (a == "status") {
+                    var allStaus = document.getElementsByName("status");
+                    allStaus.forEach((element) => {
+                        if (element.checked) {
+                            user[a] = element.value;
+                        }
+
+                    });
+                }
+            }
+            return user
+        }
+    </script>
+
+    <!-- <script src="./create.js"></script> -->
+    <!-- <script src="./read.js"></script> -->
+    <!-- <script src="./update.js"></script>
+    <script src="./delete.js"></script> -->
+
+    <script>
+        // myStudents.length = 2;
+        // stringedUsers.length = total char in the array
+        // JSON = JavaScript Object Notation
+        // JSO can be converted into string and it can converted into JSON
+        // if we use parse the string is converted into JSON
+    </script>
+</body>
+
+
+</html>

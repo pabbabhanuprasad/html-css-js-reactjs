@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>fname</th>
+                <th>lname</th>
+                <th>tel</th>
+                <th>address</th>
+                <th>city</th>
+                <th>state</th>
+                <th>zip</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script>
+        var users = [
+            {
+                "fname": "Andy",
+                "lname": "Shaffer",
+                "tel": "(981)260-9234",
+                "address": "3802 Pharetra Rd",
+                "city": "Sacramento",
+                "state": "UT",
+                "zip": 41298
+            },
+            {
+                "fname": "Hurley",
+                "lname": "Grunert",
+                "tel": "(339)511-4474",
+                "address": "4136 Dui Dr",
+                "city": "Lees Summit",
+                "state": "MT",
+                "zip": 69210
+            },
+            {
+                "fname": "Nathaniel",
+                "lname": "Wagner",
+                "tel": "(641)639-2556",
+                "address": "6546 Sit Ave",
+                "city": "Fort Wayne",
+                "state": "SD",
+                "zip": 40682
+            },
+            {
+                "fname": "Milada",
+                "lname": "Loudin",
+                "tel": "(691)062-6828",
+                "address": "1322 Sapien St",
+                "city": "Ft Myers",
+                "state": "DC",
+                "zip": 25176
+            },
+            {
+                "fname": "Tom",
+                "lname": "Adams",
+                "tel": "(289)226-3963",
+                "address": "1639 Lacus Ct",
+                "city": "Idaho Falls",
+                "state": "WV",
+                "zip": 34892
+            },
+            {
+                "fname": "Veneta",
+                "lname": "Kinder",
+                "tel": "(387)876-7567",
+                "address": "1134 Dui Dr",
+                "city": "Swansea",
+                "state": "NJ",
+                "zip": 49652
+            },
+            {
+                "fname": "Teryl",
+                "lname": "Garner",
+                "tel": "(195)818-4494",
+                "address": "828 Magna St",
+                "city": "Woodlawn",
+                "state": "AK",
+                "zip": 97665
+            },
+            {
+                "fname": "Glenderee",
+                "lname": "Stair",
+                "tel": "(809)682-1705",
+                "address": "3610 Magna Ave",
+                "city": "Owensboro",
+                "state": "NJ",
+                "zip": 75946
+            },
+            {
+                "fname": "Cathy",
+                "lname": "Diramio",
+                "tel": "(165)220-1691",
+                "address": "1080 Molestie Ct",
+                "city": "Spokane",
+                "state": "ID",
+                "zip": 20842
+            },
+            {
+                "fname": "Sharad",
+                "lname": "Hettrick",
+                "tel": "(342)015-8142",
+                "address": "7134 Risus Ln",
+                "city": "Rosenberg",
+                "state": "ME",
+                "zip": 79547
+            }
+        ]
+
+        users.forEach((users)=>{
+            var myTr = document.createElement("tr")
+            // creating td's
+            // var td1 =document.createElement("td");
+            // td1.innerHTML = users.fname
+            // myTr.appendChild(td1)
+
+            // var td2 =document.createElement("td");
+            // td2.innerHTML = users.lname
+            // myTr.appendChild(td2)
+
+            // var td3 =document.createElement("td");
+            // td3.innerHTML = users.tel
+            // myTr.appendChild(td3)
+
+            // var td4 =document.createElement("td");
+            // td4.innerHTML = users.address
+            // myTr.appendChild(td4)
+
+            // var td5 =document.createElement("td");
+            // td5.innerHTML = users.city
+            // myTr.appendChild(td5)
+
+            // var td6 =document.createElement("td");
+            // td6.innerHTML = users.state
+            // myTr.appendChild(td6)
+
+            // var td7 =document.createElement("td");
+            // td7.innerHTML = users.zip
+            // myTr.appendChild(td7)
+
+            // by using for in loop
+            // for(a in users){
+            //     var myTd =document.createElement("td")
+            //     myTd.innerHTML = users[a];
+            //     myTr.appendChild(myTd)
+            // }
+
+            Object.values(users).forEach((val)=>{
+                console.log(val)
+                var myTd = document.createElement("td")
+                myTd.innerHTML = val;
+                myTr.appendChild(myTd)
+            })
+            // to create rows in table body
+            document.querySelector("tbody").appendChild(myTr)
+
+        })
+
+    </script>
+</body>
+
+</html>

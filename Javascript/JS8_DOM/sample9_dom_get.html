@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <lable for="fname">First Name : </lable>
+        <input type="text" name="" id="fname"><br><br>
+        <lable for="lname">Last Name : </lable>
+        <input type="text" name="" id="lname"><br><br>
+        <lable for="email">Email : </lable>
+        <input type="email" name="" id="email"><br><br>
+        <lable for="gender">Gender : </lable><br>
+        <input type="radio" name="gender" id="" value="Male" />Male <br>
+        <input type="radio" name="gender" id="" value="Female" />Female <br>
+        <lable for="subject">Subject : </lable><br>
+        <input type="checkbox" name="Subject" id="" value="HTML">HTML<br>
+        <input type="checkbox" name="Subject" id="" value="CSS">CSS<br>
+        <input type="checkbox" name="Subject" id="" value="JavaScript">JavaScript<br>
+        <input type="checkbox" name="Subject" id="" value="ReactJS">ReactJS<br>
+        <button type="button" onclick="getUsers()">Get User</button>
+    </form>
+    <script>
+        //     function getUsers(){
+        //         var person = {
+        //         fname:document.getElementById("fname").value,
+        //         lname:document.getElementById("lname").value,
+        //         email:document.getElementById("email").value
+        //     } 
+        //     console.log("person",person)
+        // };
+
+
+        // if we want to write fname,lname,email in one line we are using for loop
+        function getUsers() {
+            var person = {
+                fname: "",
+                lname: "",
+                email: "",
+                gender: "",
+                Subject:[]
+            };
+            for (a in person) {
+                if (a !== "gender" &&  a !== "Subject") {
+                    person[a] = document.getElementById(a).value;
+                } else if (a == "gender") {
+                    // 1.Get all elements,
+                    // 2.find checked element
+                    //3.read checked element value.
+                    var allRadioBtns = document.getElementsByName("gender");
+                    allRadioBtns.forEach((element) => {
+                        if (element.checked) {
+                            person.gender = element.value
+                        }
+                        // person.gender = element.checked.value
+                        // if we run the above line the gender is undefined because here checked is boolean not an object.
+                    })
+                } else if (a == "Subject") {
+                    var allCheckBoxes = document.getElementsByName("Subject")
+                    allCheckBoxes.forEach((element) => {
+                        if (element.checked) {
+                            person[a].push(element.value)
+                        }
+                    });
+                    console.log("person", person)
+                }
+                
+            };
+
+        } 
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // var randomNumber= Math.random();
+    // console.log(randomNumber);
+    // if we want to round the  value
+    // var randomNumber = Math.random();
+    // console.log("Random Number : ",randomNumber);
+    // console.log("Round Number : ",Math.round(randomNumber));
+    // console.log("Lowest number : ",Math.floor(randomNumber));
+
+    // if we want a randomNumber in between 1 to 100 we will multiply the randomNumber with 100
+    // Now I want 6 digit number so I will multiply the randomNumber with 1000000
+    // var randomNumber = Math.random()*1000000;
+    //   console.log("Random Number : ",randomNumber);
+    //   console.log("Round Number : ",Math.round(randomNumber));
+    //   console.log("Lowest number : ",Math.floor(randomNumber));
+    //   console.log("Highest Number : ",Math.ceil(randomNumber));
+
+    // Now I want 10  6 digit random number in an array
+    // if we refresh it in some cases 5 digit numbers are in the array
+    // var randomNumber = Math.random() * 1000000;
+    // var randomNumbers = []
+    // for (i = 0; i < 10; i++) {
+    //   var rNumber = Math.round(Math.random() * 1000000);
+    //   randomNumbers.push(rNumber);
+    // }
+    // console.log(randomNumbers);
+
+
+
+    // Now I want only 6 digit 10 numbers in an array
+    // var randomNumber = Math.random() * 1000000;
+    // var randomNumbers = []
+    // for (i = 0; i < 10; i++) {
+    //   var rNumber = Math.round(Math.random() * 1000000);
+    //   randomNumbers.push(rNumber);
+    // }
+    // console.log(randomNumbers);
+
+
+    // if we want to do restrict 6 digit number in an array we are using while loop 
+    // var randomNumbers = []
+    // while (randomNumbers.length < 10) {
+    //   var rNumber = Math.round(Math.random() * 1000000);
+    //   // if we want to find the length of the number we need to convert the number into String
+    //   if (String(rNumber).length == 6) {
+    //     randomNumbers.push(rNumber)
+    //   }
+    // }
+    // console.log(randomNumbers);
+
+
+// instead of using while loop we are using for loop
+var randomNumbers = []
+for(i=0;randomNumbers.length<10;){
+  var rNumber = Math.round(Math.random()*1000000);
+  if(String(rNumber).length == 6){
+    randomNumbers.push(rNumber);
+  }
+}
+console.log(randomNumbers);
+
+  </script>
+</body>
+
+</html>

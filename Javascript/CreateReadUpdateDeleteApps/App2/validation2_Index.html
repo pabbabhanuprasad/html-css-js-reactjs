@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <lable for="fname">First Name:</lable>
+        <input type="text" id="fname" name="" onkeyup="checkUsersInput()"><br>
+        <lable for="lname">Last Name:</lable>
+        <input type="text" name="" id="lname" onkeyup="checkUsersInput()"><br>
+        <button onclick="addUser()" type="button" disabled >Add Users</button>
+    </form>
+
+    <script>
+        function checkUsersInput(){
+            var users = {
+                fname:"",
+                lname:""
+            }
+            for(a in users){
+                users[a] = document.getElementById(a).value
+            }
+            var check = true
+            if(users.fname.length<5 || users.lname.length<6){
+                check = false
+            }
+            if(check){
+                document.querySelector("button").removeAttribute("disabled")
+            }else{
+                document.querySelector("button").removeAttribute("disabled",true)
+            }
+        }
+        function addUser(){
+            console.log("addUser() called")
+        }
+    </script>
+</body>
+</html>

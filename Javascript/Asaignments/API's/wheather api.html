@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather API</title>
+</head>
+
+<body>
+    <script>
+        var params = {phoneNumber: '<REQUIRED>', verifyCode: '<REQUIRED>'}
+
+        function getData() {
+            return new Promise((resolve, reject) => {
+                var getInfo = new XMLHttpRequest()
+                getInfo.onreadystatechange = function () {
+                    if (getInfo.readyState == 4 && getInfo.status == 200) {
+                        data = JSON.parse(getInfo.response).typeMatches[0];
+                        resolve(data)
+                    }
+                };
+                getInfo.open("GET", "https://weatherbit-v1-mashape.p.rapidapi.com/forecast/3hourly");
+                getInfo.setRequestHeader('X-RapidAPI-Key', 'db469dda77msh2a858af8d4713e0p181b7ajsnd140358bc5e7');
+                getInfo.setRequestHeader("X-RapidAPI-Host", "weatherbit-v1-mashape.p.rapidapi.com");
+                getInfo.send();
+            });
+
+        }
+       
+        console.log(getData())
+    </script>
+</body>
+
+</html>

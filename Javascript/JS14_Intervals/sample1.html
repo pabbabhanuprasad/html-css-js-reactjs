@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        window.setTimeout(()=>{
+            console.log("The code is excuted after five seconds")
+        },3000)
+        // if we want to repeat the excution for a perticular time intervel
+        window.setInterval(()=>{
+            console.log("The code is excuted for every five seconds")
+        },4000)
+        // if we want to stop the excution after the perticular interval
+        var timeInter = window.setInterval(()=>{
+            console.log("This is Bhanu Prasad");
+        },4000)
+        // to stop the excution we should type clearInterval(timeInter)
+    </script>
+</body>
+</html>

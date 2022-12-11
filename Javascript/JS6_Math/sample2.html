@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var randomNumbers = [];
+        for (i = 0; randomNumbers.length < 10; i++) {
+            var rNumber = Math.round(Math.random() * 1000000);
+            if (String(rNumber).length == 6) {
+                randomNumbers.push(rNumber);
+            }
+        }
+        var minNumber = Math.min(randomNumbers);
+        console.log(rNumber);
+
+
+        // if we want a copy of an array that means don't disturb the already existing array
+        // To do that we are giving " ... "
+        var randomNumbers = [58067, 803370, 431923, 237424, 386051, 291506, 731847, 922716, 368805, 115426];
+        console.log(randomNumbers);
+        var newNumbers = [...randomNumbers];
+        // I am changing first number in an array
+        newNumbers[0] = 123456
+        console.log(newNumbers);
+
+
+        var minNumberValues = Math.min(58067, 803370, 431923, 237424, 386051, 291506, 731847, 922716, 368805, 115426);
+        console.log(minNumberValues);
+        var maxNumberValues = Math.max(58067, 803370, 431923, 237424, 386051, 291506, 731847, 922716, 368805, 115426);
+        console.log(maxNumberValues);
+        var maxNumber = Math.max.apply(null,randomNumbers);
+        console.log("maxNumber",maxNumber)
+
+
+    </script>
+</body>
+
+</html>

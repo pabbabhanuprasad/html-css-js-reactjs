@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <table border="2px">
+    <thead>
+      <th>ID</th>
+      <th>Email</th>
+      <th>Username </th>
+      <th>Password </th>
+      <th>delete </th>
+    </thead>
+    <tbody>
+
+    </tbody>
+  </table>
+  <script>
+
+    var person = [
+      {
+        "id": 97,
+        "email": "SLittle@sapien.io",
+        "username": "KSoto",
+        "password": "cz1Xn"
+      },
+      {
+        "id": 98,
+        "email": "DUsgiveaway@vitae.net",
+        "username": "APerez",
+        "password": "OTWvq"
+      },
+      {
+        "id": 99,
+        "email": "TCurtis@convallis.io",
+        "username": "LCrooker",
+        "password": "WNjf5"
+      },
+      {
+        "id": 100,
+        "email": "LBudgell@magna.gov",
+        "username": "AAresti",
+        "password": "e92Y9"
+      },
+      {
+        "id": 101,
+        "email": "IGreaves@sit.ly",
+        "username": "MMeaney",
+        "password": "DyXuw"
+      },
+      {
+        "id": 102,
+        "email": "DHurd@sed.io",
+        "username": "ABradley",
+        "password": "CpjDh"
+      },
+      {
+        "id": 103,
+        "email": "JRitchie@tincidunt.com",
+        "username": "ALandosky",
+        "password": "FbynN"
+      },
+      {
+        "id": 104,
+        "email": "TLavallee@magna.org",
+        "username": "SMccracken",
+        "password": "6Aeq3"
+      },
+      {
+        "id": 105,
+        "email": "BLandosky@magna.org",
+        "username": "QCain",
+        "password": "qWHju"
+      },
+      {
+        "id": 106,
+        "email": "LCicero@sapien.ly",
+        "username": "LHarkey",
+        "password": "wzQBV"
+      }
+    ]
+    // person.forEach((prsn)=>{
+    //   var myTr = document.createElement("tr")
+    //   for ( a in prsn){
+    //     var myTd = document.createElement("td")
+    //     myTd.innerHTML = prsn[a]
+    //     myTr.appendChild(myTd)
+    //   }
+    //   document.querySelector("tbody").appendChild(myTr)
+    // })
+  </script>
+  <script>
+
+    var filleteredPersons = []
+    function personInfo(person) {
+      document.querySelector("tbody").innerHTML = ""
+      person.forEach((prsn,i) => {
+        var myTr = document.createElement("tr")
+        for (a in prsn) {
+          var myTd = document.createElement("td")
+          myTd.innerHTML = prsn[a]
+          myTr.appendChild(myTd)
+        }
+         
+        var myTd =document.createElement("td")
+        var deletebtn = document.createElement("button")
+        deletebtn.innerHTML = "delete"
+        deletebtn.setAttribute("onclick"," deletePerson("+i+")")
+        myTd.appendChild(deletebtn)
+        myTr.appendChild(myTd)
+        
+        document.querySelector("tbody").appendChild(myTr)
+      })
+
+    }
+     function deletePerson(i){
+      if (filleteredPersons.length == 0){
+        filleteredPersons = person.filter((item,index)=>{
+          return item.id != person[i].id
+        })
+      }
+      else{
+        filleteredPersons =filleteredPersons.filter((item,index)=>{
+          return item.id != filleteredPersons[i].id
+        })
+      }
+      personInfo(filleteredPersons)
+     }
+    personInfo(person)
+
+  </script>
+</body>
+
+</html>

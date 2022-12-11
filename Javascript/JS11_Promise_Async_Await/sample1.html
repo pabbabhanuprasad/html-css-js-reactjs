@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1.Synchronous,(one after one   or   step by step)
+        // 2.Asynchronous.
+
+        // getDatafromserver()  //It involved Asynchronous Process
+
+
+        // function displayMyFirstName() {
+        //     document.write("Bhanu")
+        // }
+
+        // function displayMyLastName() {
+        //     document.write("Prasad")
+        // }
+        // displayMyFirstName();
+        // displayMyLastName()
+
+
+        // In javascript we have a option to display the data after sometime.
+        // function displayMyFirstName() {
+        //     setTimeout(()=>{
+        //         document.write("Bhanu")
+        //     },3000)
+        // }
+
+        // function displayMyLastName() {
+        //     document.write("Prasad")
+        // }
+        // displayMyFirstName();
+        // displayMyLastName()
+
+
+        var users = []
+        function getAllUsersFromServer() {
+            var getData = new XMLHttpRequest()
+            getData.onreadystatechange = function () {
+                if (getData.readyState == 4 && getData.status == 200) {
+                    users = JSON.parse(getData.response)
+                    console.log("Users inside displayMyFirstName : ", users)
+                    displayAllUsers()
+                }
+            }
+            getData.open("GET", "https://filltext.com//?rows=10&fname={first}&lname={last}&tel={telephone}&address={streetAddress}&city={city}&state={usState|abbr}&zip={zip}&pretty=true")
+            getData.send()
+        }
+        function displayAllUsers() {
+            console.log("Users inside displayAllUsers : ", users)
+        }
+        getAllUsersFromServer();
+        displayAllUsers()
+
+    </script>
+</body>
+
+</html>

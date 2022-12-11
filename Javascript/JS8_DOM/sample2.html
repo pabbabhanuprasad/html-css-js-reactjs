@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <form>
+    <label for="">First Name : </label> <input type="text" name="" id="fname"><br>
+    <input type="radio" name="gender"  value="Male" /> Male <br />
+    <input type="radio" name="gender" value="Female" /> Female <br />
+    <button onclick="getGender()" type="button">Get Gender</button>
+  </form>
+  <form>
+    <label for="">First Name : </label> <input type="text" name="" id="fname"><br>
+    <input type="radio" name="gender" class="userGender" value="Male" /> Male <br />
+    <input type="radio" name="gender" class="userGender" value="Female" /> Female <br />
+    <button onclick="getGender()" type="button">Get Gender</button>
+  </form>
+
+  <script>
+    //  function getGender(){
+    //   var allRadios = document.getElementsByName("gender")
+    //   allRadios.forEach((rbtn)=>{
+    //     if(rbtn.checked){
+    //       console.log(rbtn.value)
+    //     }
+    //  })
+    //  }
+
+     function getGender(){
+      var allRadiosNames = document.getElementsByName("userGender")
+      var allRadiosClasses = document.getElementsByClassName("userGender");
+    console.log(allRadiosNames);
+    console.log(allRadiosClasses);
+      allRadiosNames.forEach((rbtn)=>{
+        if(rbtn.checked){
+          console.log(rbtn.value)
+        }
+     })
+    for(i=0;i<allRadiosClasses.length;i++){
+      if(allRadiosClasses[i].checked){
+      console.log("From HTML collections : ",allRadiosClasses[i].value)
+     }
+     }
+    }
+  </script>
+
+  <!-- If we run it console 
+  document.getElementById("fname").value
+'bhanu'
+var allRadios = document.getElementsByName("gender")
+undefined
+var allRadios = document.getElementsByName("gender")
+undefined
+allRadios
+NodeList(2) [input.userGender, input.userGender]0: input.userGenderaccept: ""accessKey: ""align: ""alt: ""ariaAtomic: nullariaAutoComplete: nullariaBrailleLabel: nullariaBrailleRoleDescription: nullariaBusy: nullariaChecked: nullariaColCount: nullariaColIndex: nullariaColSpan: nullariaCurrent: nullariaDescription: nullariaDisabled: nullariaExpanded: nullariaHasPopup: nullariaHidden: nullariaInvalid: nullariaKeyShortcuts: nullariaLabel: nullariaLevel: nullariaLive: nullariaModal: nullariaMultiLine: nullariaMultiSelectable: nullariaOrientation: nullariaPlaceholder: nullariaPosInSet: nullariaPressed: nullariaReadOnly: nullariaRelevant: nullariaRequired: nullariaRoleDescription: nullariaRowCount: nullariaRowIndex: nullariaRowSpan: nullariaSelected: nullariaSetSize: nullariaSort: nullariaValueMax: nullariaValueMin: nullariaValueNow: nullariaValueText: nullassignedSlot: nullattributeStyleMap: StylePropertyMap {size: 0}attributes: NamedNodeMap {0: type, 1: name, 2: class, 3: value, type: type, name: name, class: class, value: value, length: 4}autocapitalize: ""autocomplete: ""autofocus: falsebaseURI: "http://127.0.0.1:5500/Javascript/JS8_DOM/sample2.html?"checked: truechildElementCount: 0childNodes: NodeList []children: HTMLCollection []classList: DOMTokenList ['userGender', value: 'userGender']className: "userGender"clientHeight: 13clientLeft: 0clientTop: 0clientWidth: 13contentEditable: "inherit"dataset: DOMStringMap {}defaultChecked: falsedefaultValue: "Male"dir: ""dirName: ""disabled: falsedraggable: falseelementTiming: ""enterKeyHint: ""files: nullfirstChild: nullfirstElementChild: nullform: formformAction: "http://127.0.0.1:5500/Javascript/JS8_DOM/sample2.html?"formEnctype: ""formMethod: ""formNoValidate: falseformTarget: ""height: 0hidden: falseid: ""incremental: falseindeterminate: falseinert: falseinnerHTML: ""innerText: ""inputMode: ""isConnected: trueisContentEditable: falselabels: NodeList []lang: ""lastChild: nulllastElementChild: nulllist: nulllocalName: "input"max: ""maxLength: -1min: ""minLength: -1multiple: falsename: "gender"namespaceURI: "http://www.w3.org/1999/xhtml"nextElementSibling: brnextSibling: textnodeName: "INPUT"nodeType: 1nodeValue: nullnonce: ""offsetHeight: 13offsetLeft: 13offsetParent: bodyoffsetTop: 33offsetWidth: 13onabort: nullonanimationend: nullonanimationiteration: nullonanimationstart: nullonauxclick: nullonbeforecopy: nullonbeforecut: nullonbeforeinput: nullonbeforematch: nullonbeforepaste: nullonbeforexrselect: nullonblur: nulloncancel: nulloncanplay: nulloncanplaythrough: nullonchange: nullonclick: nullonclose: nulloncontextlost: nulloncontextmenu: nulloncontextrestored: nulloncopy: nulloncuechange: nulloncut: nullondblclick: nullondrag: nullondragend: nullondragenter: nullondragleave: nullondragover: nullondragstart: nullondrop: nullondurationchange: nullonemptied: nullonended: nullonerror: nullonfocus: nullonformdata: nullonfullscreenchange: nullonfullscreenerror: nullongotpointercapture: nulloninput: nulloninvalid: nullonkeydown: nullonkeypress: nullonkeyup: nullonload: nullonloadeddata: nullonloadedmetadata: nullonloadstart: nullonlostpointercapture: nullonmousedown: nullonmouseenter: nullonmouseleave: nullonmousemove: nullonmouseout: nullonmouseover: nullonmouseup: nullonmousewheel: nullonpaste: nullonpause: nullonplay: nullonplaying: nullonpointercancel: nullonpointerdown: nullonpointerenter: nullonpointerleave: nullonpointermove: nullonpointerout: nullonpointerover: nullonpointerrawupdate: nullonpointerup: nullonprogress: nullonratechange: nullonreset: nullonresize: nullonscroll: nullonsearch: nullonsecuritypolicyviolation: nullonseeked: nullonseeking: nullonselect: nullonselectionchange: nullonselectstart: nullonslotchange: nullonstalled: nullonsubmit: nullonsuspend: nullontimeupdate: nullontoggle: nullontransitioncancel: nullontransitionend: nullontransitionrun: nullontransitionstart: nullonvolumechange: nullonwaiting: nullonwebkitanimationend: nullonwebkitanimationiteration: nullonwebkitanimationstart: nullonwebkitfullscreenchange: nullonwebkitfullscreenerror: nullonwebkittransitionend: nullonwheel: nullouterHTML: "<input type=\"radio\" name=\"gender\" class=\"userGender\" value=\"Male\">"outerText: ""ownerDocument: documentparentElement: formparentNode: formpart: DOMTokenList [value: '']pattern: ""placeholder: ""prefix: nullpreviousElementSibling: brpreviousSibling: textreadOnly: falserequired: falserole: nullscrollHeight: 13scrollLeft: 0scrollTop: 0scrollWidth: 13selectionDirection: nullselectionEnd: nullselectionStart: nullshadowRoot: nullsize: 20slot: ""spellcheck: truesrc: ""step: ""style: CSSStyleDeclaration {accentColor: '', additiveSymbols: '', alignContent: '', alignItems: '', alignSelf: '', …}tabIndex: 0tagName: "INPUT"textContent: ""title: ""translate: truetype: "radio"useMap: ""validationMessage: ""validity: ValidityState {valueMissing: false, typeMismatch: false, patternMismatch: false, tooLong: false, tooShort: false, …}value: "Male"valueAsDate: nullvalueAsNumber: NaNvirtualKeyboardPolicy: ""webkitEntries: []webkitdirectory: falsewidth: 0willValidate: true[[Prototype]]: HTMLInputElement(...)1: input.userGenderaccept: ""accessKey: ""align: ""alt: ""ariaAtomic: nullariaAutoComplete: nullariaBrailleLabel: nullariaBrailleRoleDescription: nullariaBusy: nullariaChecked: nullariaColCount: nullariaColIndex: nullariaColSpan: nullariaCurrent: nullariaDescription: nullariaDisabled: nullariaExpanded: nullariaHasPopup: nullariaHidden: nullariaInvalid: nullariaKeyShortcuts: nullariaLabel: nullariaLevel: nullariaLive: nullariaModal: nullariaMultiLine: nullariaMultiSelectable: nullariaOrientation: nullariaPlaceholder: nullariaPosInSet: nullariaPressed: nullariaReadOnly: nullariaRelevant: nullariaRequired: nullariaRoleDescription: nullariaRowCount: nullariaRowIndex: nullariaRowSpan: nullariaSelected: nullariaSetSize: nullariaSort: nullariaValueMax: nullariaValueMin: nullariaValueNow: nullariaValueText: nullassignedSlot: nullattributeStyleMap: StylePropertyMap {size: 0}attributes: NamedNodeMap {0: type, 1: name, 2: class, 3: value, type: type, name: name, class: class, value: value, length: 4}autocapitalize: ""autocomplete: ""autofocus: falsebaseURI: "http://127.0.0.1:5500/Javascript/JS8_DOM/sample2.html?"checked: falsechildElementCount: 0childNodes: NodeList []children: HTMLCollection []classList: DOMTokenList ['userGender', value: 'userGender']className: "userGender"clientHeight: 13clientLeft: 0clientTop: 0clientWidth: 13contentEditable: "inherit"dataset: DOMStringMap {}defaultChecked: falsedefaultValue: "Female"dir: ""dirName: ""disabled: falsedraggable: falseelementTiming: ""enterKeyHint: ""files: nullfirstChild: nullfirstElementChild: nullform: formformAction: "http://127.0.0.1:5500/Javascript/JS8_DOM/sample2.html?"formEnctype: ""formMethod: ""formNoValidate: falseformTarget: ""height: 0hidden: falseid: ""incremental: falseindeterminate: falseinert: falseinnerHTML: ""innerText: ""inputMode: ""isConnected: trueisContentEditable: falselabels: NodeList []lang: ""lastChild: nulllastElementChild: nulllist: nulllocalName: "input"max: ""maxLength: -1min: ""minLength: -1multiple: falsename: "gender"namespaceURI: "http://www.w3.org/1999/xhtml"nextElementSibling: brnextSibling: textnodeName: "INPUT"nodeType: 1nodeValue: nullnonce: ""offsetHeight: 13offsetLeft: 13offsetParent: bodyoffsetTop: 53offsetWidth: 13onabort: nullonanimationend: nullonanimationiteration: nullonanimationstart: nullonauxclick: nullonbeforecopy: nullonbeforecut: nullonbeforeinput: nullonbeforematch: nullonbeforepaste: nullonbeforexrselect: nullonblur: nulloncancel: nulloncanplay: nulloncanplaythrough: nullonchange: nullonclick: nullonclose: nulloncontextlost: nulloncontextmenu: nulloncontextrestored: nulloncopy: nulloncuechange: nulloncut: nullondblclick: nullondrag: nullondragend: nullondragenter: nullondragleave: nullondragover: nullondragstart: nullondrop: nullondurationchange: nullonemptied: nullonended: nullonerror: nullonfocus: nullonformdata: nullonfullscreenchange: nullonfullscreenerror: nullongotpointercapture: nulloninput: nulloninvalid: nullonkeydown: nullonkeypress: nullonkeyup: nullonload: nullonloadeddata: nullonloadedmetadata: nullonloadstart: nullonlostpointercapture: nullonmousedown: nullonmouseenter: nullonmouseleave: nullonmousemove: nullonmouseout: nullonmouseover: nullonmouseup: nullonmousewheel: nullonpaste: nullonpause: nullonplay: nullonplaying: nullonpointercancel: nullonpointerdown: nullonpointerenter: nullonpointerleave: nullonpointermove: nullonpointerout: nullonpointerover: nullonpointerrawupdate: nullonpointerup: nullonprogress: nullonratechange: nullonreset: nullonresize: nullonscroll: nullonsearch: nullonsecuritypolicyviolation: nullonseeked: nullonseeking: nullonselect: nullonselectionchange: nullonselectstart: nullonslotchange: nullonstalled: nullonsubmit: nullonsuspend: nullontimeupdate: nullontoggle: nullontransitioncancel: nullontransitionend: nullontransitionrun: nullontransitionstart: nullonvolumechange: nullonwaiting: nullonwebkitanimationend: nullonwebkitanimationiteration: nullonwebkitanimationstart: nullonwebkitfullscreenchange: nullonwebkitfullscreenerror: nullonwebkittransitionend: nullonwheel: nullouterHTML: "<input type=\"radio\" name=\"gender\" class=\"userGender\" value=\"Female\">"outerText: ""ownerDocument: documentparentElement: formparentNode: formpart: DOMTokenList [value: '']pattern: ""placeholder: ""prefix: nullpreviousElementSibling: brpreviousSibling: textreadOnly: falserequired: falserole: nullscrollHeight: 13scrollLeft: 0scrollTop: 0scrollWidth: 13selectionDirection: nullselectionEnd: nullselectionStart: nullshadowRoot: nullsize: 20slot: ""spellcheck: truesrc: ""step: ""style: CSSStyleDeclaration {accentColor: '', additiveSymbols: '', alignContent: '', alignItems: '', alignSelf: '', …}tabIndex: 0tagName: "INPUT"textContent: ""title: ""translate: truetype: "radio"useMap: ""validationMessage: ""validity: ValidityState {valueMissing: false, typeMismatch: false, patternMismatch: false, tooLong: false, tooShort: false, …}value: "Female"valueAsDate: nullvalueAsNumber: NaNvirtualKeyboardPolicy: ""webkitEntries: []webkitdirectory: falsewidth: 0willValidate: true[[Prototype]]: HTMLInputElement(...)length: 2[[Prototype]]: NodeList
+allRadios.forEach((rbtn)=>log(rbtn.checked) -->
+  <script>
+    // Accessng HTML elements
+    // 1.which will give single elements
+      //  1.getElementById
+      //  2.Query selector
+    // 2.which will give multiple elements
+      // 1.getElementsById
+      // 2.getElementsByName
+      // 3.getElementsByClassName
+      // 4.QuerySelectorAll
+
+    // function getGender() {
+    //   var allRadiosTagNames = document.getElementsByTagName("input")
+    //   var allRadiosNames = document.getElementsByName("gender")
+    //   var allRadiosClasses = document.getElementsByClassName("userGender");
+    //   var allRadiosQuerySelector = document.querySelectorAll("input")
+    //   console.log("Get Elements By Tag name : - ", allRadiosTagNames)
+    //   console.log("Get Elements by Name : - ", allRadiosNames);
+    //   console.log("Get Elements By Class Name : -", allRadiosClasses);
+    //   console.log("Query Selector All : -", allRadiosQuerySelector)
+
+    //   allRadiosTagNames.map((rbtn) => {
+    //     if (rbtn.checked) {
+    //       console.log(rbtn.value)
+    //     }
+    //   })
+
+    //   allRadiosNames.forEach((rbtn) => {
+    //     if (rbtn.checked) {
+    //       console.log(rbtn.value)
+    //     }
+    //   })
+
+    //   for (i = 0; i < allRadiosClasses.length; i++) {
+    //     if (allRadiosClasses[i].checked) {
+    //       console.log("From HTML Collections : -", allRadiosClasses[i].value)
+    //     }
+    //   }
+
+      // allRadiosClasses.forEach((rbtn)=>{
+      //     if(rbtn.checked){
+      //         console.log(rbtn.value)
+      //     }
+      // })
+    
+      // Accessing HTML Elements
+      // 1. Which will give single Element
+      // 1. getElementById
+      // 2. QuerySelector
+
+      // 2. Which will give Multiple Elements as Array of Elements
+      // 1. getElementsByTagName
+      // 2. getElementsByName
+      // 3. getElementsByClassName
+      // 4. querySelectorAll
+  </script>
+</body>
+
+</html>

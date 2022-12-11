@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var myName = "Bhanu";
+        console.log(myName);
+        var WelcomeMessage = "My name is Bhanu Prasad, my village name is Undrajavaram";
+        // to find length of the string
+        console.log(WelcomeMessage.length);
+        // to split the string
+        console.log(WelcomeMessage.split(" "));
+        // to join the string after splitting
+        console.log(WelcomeMessage.split(" ").join(" "));
+        // to join the string after splitting in reverse order
+        console.log(WelcomeMessage.split(" ").reverse().join(" "));
+        // split is related to string
+        // Reverse and Join are Array method
+        // to find the index of the string
+        console.log(WelcomeMessage.indexOf("name"));
+        // we are having two similar strings in a string, we want to find the last string 
+        console.log(WelcomeMessage.lastIndexOf("name"));
+        // if we want to separate the string
+        var commaIndex = WelcomeMessage.indexOf(",")
+        console.log("commaIndex",commaIndex)
+        var commaIndex = WelcomeMessage.indexOf(",");
+        // to print the separated string we should give the starting index value & ending value.
+        // Need to give both Index values
+        console.log(WelcomeMessage.substring(commaIndex+2,commaIndex+35))
+    // Need to give one index value and no.of characters are required
+        console.log(WelcomeMessage.substr(commaIndex+2,35))
+        // Need to give both index values
+        console.log(WelcomeMessage.slice(commaIndex+2,commaIndex+35))
+    </script>
+</body>
+</html>

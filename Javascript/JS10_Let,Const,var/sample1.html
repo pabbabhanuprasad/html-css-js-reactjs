@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var is available from starting to ending of the function,var is a functional scoped.
+        // let is available only in a perticular block,It is a block level scoped.
+        // const is block level scoped.
+
+        // function showNumbers() {
+        //     for (i = 0; i < 10; i++) {
+        //         console.log(i)
+        //     }
+        //     console.log("After the loop excution the value of I is: ",i)
+        // }
+        // showNumbers()
+
+        // var can be redeclare
+        // var myName = "Bhanu Prasad";
+        // var myName = "Raghu"
+        // console.log(myName);
+        
+        // let can not be redeclare
+        // let user = "Mohan";
+        // let user = "Prasad";
+
+        // const give only one value
+        // function showNumbers() {
+        //     for (const i = 0; i < 10; i++) {
+        //         console.log(i)
+        //     }
+        //     console.log("After the loop excution the value of I is: ",i)
+        // }
+        // showNumbers()
+        // No redeclaration and reassignment
+        // const myName = "Bhanu";
+        // const myName = "Mohan";
+        // console.log(myName);
+
+        // let reassignment is possible and reclaration is not possible.
+        let user = "Prasad";
+        user = "Bhanu";
+        console.log(user);
+
+        // Redeclaration and Reassignment both are not possible.
+        const myName = "Raghu";
+        myName = "Prasad";
+    </script>
+</body>
+
+</html>

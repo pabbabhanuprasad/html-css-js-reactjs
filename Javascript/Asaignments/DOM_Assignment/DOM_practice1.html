@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+ <table border="1px">
+  <thead>
+    <tr>
+      <th>First_Name</th>
+      <th>Last_Name</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  </tbody>
+ </table>
+
+
+
+  <script>
+    var friendnames = [
+      {
+        "fname": "Bhanu",
+        "lname": "Prasad"
+      },
+      {
+        "fname": "Mohan",
+        "lname": "Krishna"
+      },
+      {
+        "fname": "Raghu",
+        "lname": "Sai"
+      },
+      {
+        "fname": "Durga",
+        "lname": "Prasad"
+      },
+      {
+        "fname": "Anil",
+        "lname": "Kumar"
+      },
+      {
+        "fname": "Suresh",
+        "lname": "Kumar"
+      },
+      {
+        "fname": "Hari",
+        "lname": "Krishna"
+      },
+      {
+        "fname": "Sai",
+        "lname": "Ram"
+      },
+      {
+        "fname": "Naga",
+        "lname": "Lokesh"
+      }
+    ]
+// to dispaly the elements in array we are using forEach
+    friendnames.forEach((friends)=>{
+      var myTr = document.createElement("tr")
+      for ( a in friends){
+        var myTd = document.createElement("td")
+        myTd.innerHTML=friends[a]
+        myTr.appendChild(myTd)
+       
+      }
+      document.querySelector("tbody").appendChild(myTr)
+    })
+  </script>
+</body>
+
+</html>

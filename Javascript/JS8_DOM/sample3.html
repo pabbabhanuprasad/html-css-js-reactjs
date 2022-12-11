@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <form>
+        <input type="checkbox" name="" > HTML <br>
+        <input type="checkbox" name=""  > CSS <br>
+        <input type="checkbox" name="" > Javascript <br>
+        <input type="checkbox" name="" > ReactJS <br>
+        <button>Get All Values</button>
+    </form> -->
+    <!-- <script>
+         var allSubjectsTagNames = document.getElementsByTagName("input");
+         console.log( allSubjectsTagNames);
+        //  o/p is HTMLCollection(4) [input, input, input, input]
+    </script> -->
+
+
+<!-- <form>
+  <input type="checkbox" name="" class="subject"> HTML <br>
+  <input type="checkbox" name=""  class="subject" > CSS <br>
+  <input type="checkbox" name=""  class="subject"> Javascript <br>
+  <input type="checkbox" name=""  class="subject"> ReactJS <br>
+  <button>Get All Values</button>
+</form> -->
+<!-- <script>
+  var allSubjectsClassnames = document.getElementsByClassName("subject");
+  console.log(allSubjectsClassnames);
+  // o/p is HTMLCollection(4) [input.subject, input.subject, input.subject, input.subject
+</script> -->
+
+<!-- <form>
+  <input type="checkbox" name="ui" class="subject"> HTML <br>
+  <input type="checkbox" name="ui"  class="subject" > CSS <br>
+  <input type="checkbox" name="ui"  class="subject"> Javascript <br>
+  <input type="checkbox" name="ui"  class="subject"> ReactJS <br>
+  <button>Get All Values</button>
+</form> -->
+<!-- <script>
+  var allSubjectsNames = document.getElementsByName("ui");
+  console.log(allSubjectsNames);
+  // o/p is NodeList(4) [input.subject, input.subject, input.subject, input.subject]
+
+  allSubjectsNames.forEach((ele)=>{console.log(ele)});
+  console.log(allSubjectsNames);
+  // o/p is NodeList(4) [input.subject, input.subject, input.subject, input.subject]
+</script> -->
+
+<form>
+  <input type="checkbox" name="ui" class="subject"> HTML <br>
+  <input type="checkbox" name="ui"  class="subject" > CSS <br>
+  <input type="checkbox" name="ui"  class="subject"> Javascript <br>
+  <input type="checkbox" name="ui"  class="subject"> ReactJS <br>
+  <button>Get All Values</button>
+</form>
+<script>
+  var allSubjects = document.querySelectorAll("input");
+  console.log(allSubjects);
+  // o/p is NodeList(4) [input.subject, input.subject, input.subject, input.subject]
+</script>
+
+
+<script>
+  var playersDetails = [
+    { name: "Bhanu", runs:15},
+    { name: "Mohan", runs:51},
+    { name: "Raghu", runs:26},
+    { name: "Mani", runs:18},
+    { name: "Sai", runs:62},
+  ];
+
+  var playerScores = playersDetails.map((player)=>{
+    return player.runs
+  })
+  console.log(playerScores);
+
+  // There is another method to display the array
+  // Here we didn't use {} and return statement.
+  var playerScoresInfo = playersDetails.map((player)=>player.runs);
+  console.log(playerScoresInfo);
+
+</script>
+
+
+</body>
+</html>

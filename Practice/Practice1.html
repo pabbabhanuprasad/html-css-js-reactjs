@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100%;
+            background: linear-gradient(45deg, #dd5e89, #f7bb97);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 4;
+            font-family: 'Rubik', sans-serif;
+        }
+
+        .main-container {
+            width: 500px;
+            margin: 65px auto;
+            border-radius: 8px;
+            background-color: #000;
+            background: rgba(255, 255, 255, 0.5);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+        }
+
+        .main-container {
+            padding: 35px 35px 0 35px;
+            font-weight: 300;
+        }
+
+        .main-container .container {
+            padding: 35px;
+            text-align: center;
+        }
+
+        .main-container .input-field {
+            padding: 12px 5px;
+        }
+
+        .main-container .input-field {
+            padding: 12px 5px;
+            font-size: 16px;
+            display: block;
+            width: 100%;
+            padding: 10px 1px;
+            border: 0;
+            outline: none;
+            background-color: transparent;
+            border-bottom: 1px solid #747474;
+            transition: all 0.2s;
+        }
+
+        .main-container .input-field input:focus {
+            border-color: #222;
+        }
+
+        .main-container a.link {
+            text-decoration: none;
+            letter-spacing: 0.2px;
+            color: #747474;
+            text-transform: uppercase;
+            margin: 20px 20px;
+            display: inline-block;
+        }
+
+        .main-container .action {
+            display: flex;
+            flex-direction: row;
+            font-weight: 300;
+        }
+
+        .main-container .action{
+            border: none;
+            padding: 18px;
+            width: 100%;
+            cursor: pointer;
+            text-transform: uppercase;
+            background-color: #e8e9ec;
+            color: #777;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 0;
+            letter-spacing: 0.2px;
+            outline: 0;
+            transition: all 0.3s;
+        }
+
+        .main-container .action button:hover {
+            background-color: #d8d8d8;
+        }
+
+        .main-container .action button:nth-child(2) {
+            background: #2d3b55;
+            color: #fff;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 4px;
+        }
+
+        .main-container .action button:nth-child(2):hover {
+            background-color: #3c4d6d;
+        }
+
+        .heading {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <div class="main container">
+                <h1 class="heading">Login</h1>
+                <div class="content">
+                    <div class="input-field">
+                        <input type="email" placeholder="EMAIL" autocomplete="nope">
+                    </div>
+                    <div class="input-field">
+                        <input type="password" placeholder="Password" autocomplete="new password">
+                    </div>
+                    <a href="#" class="link">Forgot Your Password</a>
+                    <div class="action">
+                        <botton>Register</botton>
+                        <botton>Sign-In</botton>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+
+    </div>
+
+</body>
+
+</html>

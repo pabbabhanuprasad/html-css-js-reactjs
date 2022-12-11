@@ -1,0 +1,319 @@
+{
+    "explains": [],
+    "count": 15,
+    "quotes": [
+      {
+        "exchange": "NMS",
+        "shortname": "Tesla, Inc.",
+        "quoteType": "EQUITY",
+        "symbol": "TSLA",
+        "index": "quotes",
+        "score": 1238138,
+        "typeDisp": "Equity",
+        "longname": "Tesla, Inc.",
+        "exchDisp": "NASDAQ",
+        "sector": "Consumer Cyclical",
+        "industry": "Auto Manufacturers",
+        "dispSecIndFlag": true,
+        "isYahooFinance": true
+      },
+      {
+        "exchange": "NEO",
+        "shortname": "TESLA, INC. CDR (CAD HEDGED)",
+        "quoteType": "EQUITY",
+        "symbol": "TSLA.NE",
+        "index": "quotes",
+        "score": 21212,
+        "typeDisp": "Equity",
+        "longname": "Tesla, Inc.",
+        "exchDisp": "NEO",
+        "sector": "Consumer Cyclical",
+        "industry": "Auto Manufacturers",
+        "isYahooFinance": true
+      },
+      {
+        "exchange": "GER",
+        "shortname": "TESLA INC",
+        "quoteType": "EQUITY",
+        "symbol": "TL0.DE",
+        "index": "quotes",
+        "score": 20543,
+        "typeDisp": "Equity",
+        "longname": "Tesla, Inc.",
+        "exchDisp": "XETRA",
+        "sector": "Consumer Cyclical",
+        "industry": "Auto Manufacturers",
+        "isYahooFinance": true
+      },
+      {
+        "exchange": "NGM",
+        "shortname": "GraniteShares 1.25x Long Tesla ",
+        "quoteType": "ETF",
+        "symbol": "TSL",
+        "index": "quotes",
+        "score": 20401,
+        "typeDisp": "ETF",
+        "longname": "GraniteShares ETF Trust - GraniteShares 2x Long Tesla Daily ETF",
+        "exchDisp": "NASDAQ",
+        "isYahooFinance": true
+      },
+      {
+        "exchange": "LSE",
+        "shortname": "LEVERAGE SHARES PUBLIC LIMITED ",
+        "quoteType": "EQUITY",
+        "symbol": "TSL3.L",
+        "index": "quotes",
+        "score": 20373,
+        "typeDisp": "Equity",
+        "longname": "Leverage Shares 3x Tesla ETP",
+        "exchDisp": "London",
+        "isYahooFinance": true
+      },
+      {
+        "exchange": "FRA",
+        "shortname": "TESLA INC",
+        "quoteType": "EQUITY",
+        "symbol": "TL0.F",
+        "index": "quotes",
+        "score": 20232,
+        "typeDisp": "Equity",
+        "longname": "Tesla, Inc.",
+        "exchDisp": "Frankfurt",
+        "sector": "Consumer Cyclical",
+        "industry": "Auto Manufacturers",
+        "isYahooFinance": true
+      },
+      {
+        "exchange": "MEX",
+        "shortname": "TESLA INC",
+        "quoteType": "EQUITY",
+        "symbol": "TSLA.MX",
+        "index": "quotes",
+        "score": 20189,
+        "typeDisp": "Equity",
+        "longname": "Tesla, Inc.",
+        "exchDisp": "Mexico",
+        "sector": "Consumer Cyclical",
+        "industry": "Auto Manufacturers",
+        "isYahooFinance": true
+      }
+    ],
+    "news": [
+      {
+        "uuid": "a88d470a-8c17-3fd0-a198-f7fb8c56ef8f",
+        "title": "Tesla launches in Thailand, heats up EV rivalry",
+        "publisher": "Reuters Videos",
+        "link": "https://finance.yahoo.com/m/a88d470a-8c17-3fd0-a198-f7fb8c56ef8f/tesla-launches-in-thailand%2C.html",
+        "providerPublishTime": 1670427185,
+        "type": "VIDEO",
+        "thumbnail": {
+          "resolutions": [
+            {
+              "url": "https://s.yimg.com/uu/api/res/1.2/Mf1iZ.g.AF9rRAke4sDdaA--~B/aD01NDA7dz05NjA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/video.reutersnews.com/c367f675efafc793fddecb19199c51af",
+              "width": 960,
+              "height": 540,
+              "tag": "original"
+            },
+            {
+              "url": "https://s.yimg.com/uu/api/res/1.2/lXfT_KEg6Tg3.vlO6CZg0g--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/video.reutersnews.com/c367f675efafc793fddecb19199c51af",
+              "width": 140,
+              "height": 140,
+              "tag": "140x140"
+            }
+          ]
+        }
+      },
+      {
+        "uuid": "1290d6ab-a5b1-3718-86d9-d4814e62c904",
+        "title": "Tesla Stock Vs. BYD Stock: TSLA Falls On New China Price Cut; BYD Eyes European Plant",
+        "publisher": "Investor's Business Daily",
+        "link": "https://finance.yahoo.com/m/1290d6ab-a5b1-3718-86d9-d4814e62c904/tesla-stock-vs.-byd-stock%3A.html",
+        "providerPublishTime": 1670412024,
+        "type": "STORY",
+        "thumbnail": {
+          "resolutions": [
+            {
+              "url": "https://s.yimg.com/uu/api/res/1.2/bcHMCcLDhOus5mRJHBzy.w--~B/aD01OTk7dz0xMDYwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/ibd.com/babab75fe21f1bfd3ab60d88d9694319",
+              "width": 1060,
+              "height": 599,
+              "tag": "original"
+            },
+            {
+              "url": "https://s.yimg.com/uu/api/res/1.2/8DjIorzvyso4Pqv99bSCKg--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/ibd.com/babab75fe21f1bfd3ab60d88d9694319",
+              "width": 140,
+              "height": 140,
+              "tag": "140x140"
+            }
+          ]
+        },
+        "relatedTickers": [
+          "TSLA",
+          "BYDDY",
+          "F",
+          "XPEV",
+          "LI"
+        ]
+      },
+      {
+        "uuid": "8013de2c-ced8-3b20-840f-24eef28af130",
+        "title": "Tesla Stock Extends Slide As New China Discounts Highlight Demand Concern",
+        "publisher": "TheStreet.com",
+        "link": "https://finance.yahoo.com/m/8013de2c-ced8-3b20-840f-24eef28af130/tesla-stock-extends-slide-as.html",
+        "providerPublishTime": 1670410620,
+        "type": "STORY",
+        "thumbnail": {
+          "resolutions": [
+            {
+              "url": "https://s.yimg.com/uu/api/res/1.2/jMq9KhbzLkNftvLfPD05LA--~B/aD00NzA7dz03NTA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/thestreet.com/8db8e92d1463d11d1b74ee79c1dc4b09",
+              "width": 750,
+              "height": 470,
+              "tag": "original"
+            },
+            {
+              "url": "https://s.yimg.com/uu/api/res/1.2/y_BET5Rq8m77T12fL.LuMw--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/thestreet.com/8db8e92d1463d11d1b74ee79c1dc4b09",
+              "width": 140,
+              "height": 140,
+              "tag": "140x140"
+            }
+          ]
+        },
+        "relatedTickers": [
+          "TSLA"
+        ]
+      },
+      {
+        "uuid": "2a4d36fe-34a6-362b-b3aa-7805d73d3197",
+        "title": "Tesla launches EVs in Thailand amid competition from cheaper brands",
+        "publisher": "Reuters",
+        "link": "https://finance.yahoo.com/news/tesla-launches-evs-thailand-amid-081141604.html",
+        "providerPublishTime": 1670400701,
+        "type": "STORY",
+        "thumbnail": {
+          "resolutions": [
+            {
+              "url": "https://s.yimg.com/uu/api/res/1.2/nSBFpNw4zv.BBxyKhqMZ5g--~B/aD01MzM7dz04MDA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/reuters-finance.com/f44217168906b05711ec7bc092ade03f",
+              "width": 800,
+              "height": 533,
+              "tag": "original"
+            },
+            {
+              "url": "https://s.yimg.com/uu/api/res/1.2/jXh4zWUh7t2WZ0N.6L2kPA--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/reuters-finance.com/f44217168906b05711ec7bc092ade03f",
+              "width": 140,
+              "height": 140,
+              "tag": "140x140"
+            }
+          ]
+        },
+        "relatedTickers": [
+          "TSLA"
+        ]
+      },
+      {
+        "uuid": "883c06a1-6676-3d9e-9909-eccf3ec82495",
+        "title": "Tesla offers additional discount to Chinese buyers on some models",
+        "publisher": "Reuters",
+        "link": "https://finance.yahoo.com/news/tesla-offers-additional-discount-chinese-050718149.html",
+        "providerPublishTime": 1670389638,
+        "type": "STORY",
+        "thumbnail": {
+          "resolutions": [
+            {
+              "url": "https://s.yimg.com/uu/api/res/1.2/aVGe4HuIZpDZCRNVQvJgHg--~B/aD01MzM7dz04MDA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/reuters-finance.com/256f191ba954e543d5ebc0a7f4c9b467",
+              "width": 800,
+              "height": 533,
+              "tag": "original"
+            },
+            {
+              "url": "https://s.yimg.com/uu/api/res/1.2/sDUcxrAFZDpOVCRifzHZQw--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/reuters-finance.com/256f191ba954e543d5ebc0a7f4c9b467",
+              "width": 140,
+              "height": 140,
+              "tag": "140x140"
+            }
+          ]
+        }
+      },
+      {
+        "uuid": "de32d490-def4-30a0-ab11-9c5935c07218",
+        "title": "Tesla Is Offering Discounts. Wall Street Thinks It Has an Issue With Demand.",
+        "publisher": "Barrons.com",
+        "link": "https://finance.yahoo.com/m/de32d490-def4-30a0-ab11-9c5935c07218/tesla-is-offering-discounts..html",
+        "providerPublishTime": 1670420640,
+        "type": "STORY",
+        "thumbnail": {
+          "resolutions": [
+            {
+              "url": "https://s.yimg.com/uu/api/res/1.2/HLp3YljoxJFGfI.WYPnjPw--~B/aD02NDA7dz0xMjgwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/Barrons.com/dbd3b30938cec396af4018f059582c5f",
+              "width": 1280,
+              "height": 640,
+              "tag": "original"
+            },
+            {
+              "url": "https://s.yimg.com/uu/api/res/1.2/4pIEkRqthm1wpxu6y0wQTw--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/Barrons.com/dbd3b30938cec396af4018f059582c5f",
+              "width": 140,
+              "height": 140,
+              "tag": "140x140"
+            }
+          ]
+        },
+        "relatedTickers": [
+          "TSLA",
+          "^GSPC"
+        ]
+      },
+      {
+        "uuid": "e8b287b8-3dd9-37a5-8118-e597b7bc7162",
+        "title": "Dow Jones Continues To Fall After Stock Market Sell-Off; Apple, Tesla Slide",
+        "publisher": "Investor's Business Daily",
+        "link": "https://finance.yahoo.com/m/e8b287b8-3dd9-37a5-8118-e597b7bc7162/dow-jones-continues-to-fall.html",
+        "providerPublishTime": 1670425362,
+        "type": "STORY",
+        "thumbnail": {
+          "resolutions": [
+            {
+              "url": "https://s.yimg.com/uu/api/res/1.2/WAuaz6qrZ4OYu_AuKxC0vQ--~B/aD02MDA7dz0xMDY1O2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/ibd.com/f84dddde254e978a0083114ec56c1e2b",
+              "width": 1065,
+              "height": 600,
+              "tag": "original"
+            },
+            {
+              "url": "https://s.yimg.com/uu/api/res/1.2/IVbsawCKXte9EBfO391xMQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/ibd.com/f84dddde254e978a0083114ec56c1e2b",
+              "width": 140,
+              "height": 140,
+              "tag": "140x140"
+            }
+          ]
+        },
+        "relatedTickers": [
+          "^DJI",
+          "TSLA",
+          "CVX",
+          "COMP"
+        ]
+      },
+      {
+        "uuid": "3f7912f5-7d57-32a6-beae-338fd9bf98bd",
+        "title": "UPDATE 1-Tesla offers additional discount to Chinese buyers on some models",
+        "publisher": "Reuters",
+        "link": "https://finance.yahoo.com/news/1-tesla-offers-additional-discount-050351828.html",
+        "providerPublishTime": 1670389431,
+        "type": "STORY",
+        "relatedTickers": [
+          "TSLA"
+        ]
+      }
+    ],
+    "nav": [],
+    "lists": [],
+    "researchReports": [],
+    "screenerFieldResults": [],
+    "totalTime": 76,
+    "timeTakenForQuotes": 458,
+    "timeTakenForNews": 600,
+    "timeTakenForAlgowatchlist": 400,
+    "timeTakenForPredefinedScreener": 400,
+    "timeTakenForCrunchbase": 0,
+    "timeTakenForNav": 400,
+    "timeTakenForResearchReports": 0,
+    "timeTakenForScreenerField": 0,
+    "timeTakenForCulturalAssets": 0
+  }

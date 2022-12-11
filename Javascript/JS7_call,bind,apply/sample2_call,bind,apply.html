@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let name1 = {
+            firstname: "Bhanu",
+            lastname: "Prasad",
+            printfullname: function () {
+                console.log(this.firstname + " " + this.lastname);
+            }
+        }
+        name1.printfullname();
+
+        let name2 = {
+            firstname: "Mohan",
+            lastname: "Krishna",
+            printfullname: function () {
+                console.log(this.firstname + " " + this.lastname);
+            }
+        }
+        name2.printfullname();
+
+        // call method
+        let name3 = {
+            firstname: "Bhanu",
+            lastname: "Prasad",
+        }
+
+        let name4 = {
+            firstname: "Mohan",
+            lastname: "Krishna",
+        }
+
+        let printfullname = function () {
+            console.log(this.firstname + " " + this.lastname);
+        }
+        printfullname.call(name3);
+        printfullname.call(name4);
+
+        // Adding aurguments in a function
+        let name5 = {
+            firstname: "Bhanu",
+            lastname: "Prasad",
+        }
+        let name6 = {
+            firstname: "Mohan",
+            lastname: "Krishna",
+        }
+        let printfullname1 = function (hometown, state) {
+            console.log(this.firstname + " " + this.lastname + " from " + hometown + " , " + state);
+        }
+        printfullname1.call(name5, "Undrajavaram", "Andhra Prasadh");
+        printfullname1.call(name6, "Undrajavaram", "Andhra Prasadh");
+
+        // Apply method: It takes the second aurgument as an Array list of the parameter which needs to be pass to this printfullname function 
+        printfullname1.apply(name5, ["Nidadavolu", "Andhra Pradesh"]);
+        printfullname1.apply(name6, ["Nidadavolu", "Andhra Pradesh"]);
+
+        // Bind method: does not directly invokes the method, but gives you the copy of that exactly same method which can be invoke later. 
+        let printMyName = printfullname1.bind(name5, "UP", "AP");
+        printMyName(printMyName);
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

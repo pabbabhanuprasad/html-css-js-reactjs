@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .body{
+            padding-left: 25%;
+            padding-right: 25%;
+            padding-top: 2%;
+            padding-bottom: 2%;
+            background-color: rgb(247, 133, 133);
+        }
+        .container {
+            height:90vh;
+            border:1 px solid black;
+            background-color: white;
+        }
+        .heading{
+            text-align: center;
+            padding-top: 5px;
+        }
+        .lables{
+            padding-left: 10px;
+        }
+        .inputs{
+            margin-left:10px;
+            width:95%;
+        }
+        .send{
+            color:white;
+            border:none;
+            text-decoration: none;
+            margin-left:10px;
+            width:96%;
+            background-color: rgb(85, 85, 195);
+        } */
+
+        .container {
+            width: 20%;
+            float: left;
+        }
+
+        .usertable {
+            width: 80%;
+            float: left;
+        }
+    </style>
+</head>
+
+<body class="body" >
+    <div class="main">
+        <form class="container">
+            <h3 class="heading">Bootstrap 4 Form Validation Demo</h3>
+            <hr>
+            <lable for="Name" class="lables">Name</lable><br>
+            <input type="text" name="Name" placeholder="Name" id="Name" class="inputs"><br><br>
+
+            <lable for="Username" class="lables">Username</lable><br>
+            <input type="text" name="Username" placeholder="Username" id="Username" class="inputs"><br><br>
+
+            <lable for="Email" class="lables">Email</lable><br>
+            <input type="email" name="email" placeholder="Email" id="Email" class="inputs"><br><br>
+
+            <lable for="Password" class="lables">Password</lable><br>
+            <input type="password" id="Password" placeholder="Password" class="inputs"><br><br>
+
+            <lable for="Confirm " class="lables">Confirm Password</lable><br>
+            <input type="Confirm" id="Confirm" placeholder="Confirm" class="inputs"><br><br>
+
+            <lable for="Massage" class="lables">Massage</lable><br>
+            <textarea class="inputs" id="Massage" placeholder="Massage"></textarea><br><br>
+
+            <button type="button" onclick="getUsers()" class="send">Send</button><br><br>
+        </form>
+    </div>
+
+    <div class="usertable">
+        <table border="2px">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Confirm Password</th>
+                    <th>Massage</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function getUsers(){
+            // var person = {
+            //     Name:document.getElementById("Name").value,
+            //     Username:document.getElementById("Username").value,
+            //     Email:document.getElementById("Email").value,
+            //     Password:document.getElementById("Password").value,
+            //     Confirm:document.getElementById("Confirm").value,
+            //     Massage:document.getElementById("Massage").value,
+                
+            // }
+            // console.log("Person",person);
+
+            // if we want to write above line sin one line we are using loop statement 
+            var person = {
+                Name:"",
+                Username:"",
+                Email:"",
+                Password:"",
+                Confirm:"",
+                Massage:""
+            }
+            for(a in person){
+                person[a] = document.getElementById(a).value
+            }
+            console.log("Person",person)
+        }
+    </script>
+</body>
+
+</html>
