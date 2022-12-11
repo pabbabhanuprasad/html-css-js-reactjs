@@ -29,11 +29,23 @@
         });
         document.write("Total MI team Score: " + totalScore);
 
-        var totalsixers= miplayers.reduce((initialValue, noofsixers) => {
-            if (initialValue.six==0) {
-                return initialValue.six+ noofsixers.sixers
+        //     var totalsixers= miplayers.reduce((initialValue, noofsixers) => {
+        //         if (initialValue.six==0) {
+        //             return initialValue.six+ noofsixers.sixers
+        //         } else {
+        //             return initialValue + noofsixers.sixers
+        //         }
+        //     });
+        //  document.write("Total no of sixers : " + totalsixers + "<br><br>");
+
+
+        
+
+        var lowestrun = miplayers.reduce(function (a, b) {
+            if (object.values(a).length > 0) {
+                return Math.min(a.noofruns, b.noofruns);
             } else {
-                return initialValue + noofsixers.sixers
+                return Math.min(a, b.noofruns);
             }
         });
         document.write(totalsixers);
