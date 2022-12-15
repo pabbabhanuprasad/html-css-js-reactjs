@@ -10,24 +10,24 @@
 
 <body>
     <script>
-        var arr=[34,65,23,12,86,56,48,77,92,38,90];
-        arr.sort(); //arrage the array in ascending order
-        document.write("sortedArray= ",arr+"<br>");
-        arr.pop(); //remove last element in the existing array
-        document.write("popArray= ",arr+"<br>");
-        arr.shift(); //remove first element in the existing array
-        document.write("shiftArray=" ,arr+"<br>");
-        arr.reverse(); //arrange array in reverse order with respect to existing order
-        document.write("reverseArray= ",arr+"<br>");
-        arr.push(76); //add the element in last index of the array
-        document.write("Arrayafterpushing= ",arr+"<br>");
-        arr.sort(); //arrage the array in ascending order
-        document.write("sortedArray= ",arr+"<br><br>");
+        // var arr=[34,65,23,12,87,56,48,77,92,38,90];
+        // arr.sort(); //arrage the array in ascending order
+        // document.write("sortedArray= ",arr+"<br>");
+        // arr.pop(); //remove last element in the existing array
+        // document.write("popArray= ",arr+"<br>");
+        // arr.shift(); //remove first element in the existing array
+        // document.write("shiftArray=" ,arr+"<br>");
+        // arr.reverse(); //arrange array in reverse order with respect to existing order
+        // document.write("reverseArray= ",arr+"<br>");
+        // arr.push(76); //add the element in last index of the array
+        // document.write("Arrayafterpushing= ",arr+"<br>");
+        // arr.sort(); //arrage the array in ascending order
+        // document.write("sortedArray= ",arr+"<br><br>");
 
 
 
-        let num = [23, 45, 76, 77, 90, 90, 56, 44];
-        num.sort();
+        let num = [23, 45, 76, 77, 90, 90, 90, 44];
+        let sortedArray=num.sort();
         let n = num.length;
         let temp = num[n - 1];
         let final = 0;
@@ -38,7 +38,11 @@
             }
         }
         console.log("Second Largest Number is", final);
-        document.write("Second Largest Number Is ",final)
+        document.write("Second Largest Number Is ",final+"<br>");
+        
+
+        
+
     </script>
 </body>
 
