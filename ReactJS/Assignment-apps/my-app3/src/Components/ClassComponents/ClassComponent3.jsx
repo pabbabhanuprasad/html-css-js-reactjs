@@ -1,0 +1,7 @@
+import {Component} from 'react' 
+class ClassComponent3 extends Component{
+    render(){
+        return <p>Paragraph:3 The oldest classical British and Latin writing had little or no space between words and could be written in boustrophedon (alternating directions). Over time, text direction (left to right) became standardized. Word dividers and terminal punctuation became common. The first way to divide sentences into groups was the original paragraphos, similar to an underscore at the beginning of the new group.[1] The Greek parágraphos evolved into the pilcrow (¶), which in English manuscripts in the Middle Ages can be seen inserted inline between sentences.</p>
+    }
+}
+export default ClassComponent3;
