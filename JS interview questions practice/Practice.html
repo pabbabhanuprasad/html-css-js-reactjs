@@ -10,8 +10,9 @@
 
 <body>
     <script>
-        // var arr=[34,65,23,12,87,56,48,77,92,38,90];
-        // arr.sort(); //arrage the array in ascending order
+        var arr=[34,65,27,1,87,5689,4,77,92,38,90];
+        var arr2=arr.sort((n,m)=>{return m-n}); 
+        console.log(arr2);//arrage the array in ascending order
         // document.write("sortedArray= ",arr+"<br>");
         // arr.pop(); //remove last element in the existing array
         // document.write("popArray= ",arr+"<br>");
@@ -26,7 +27,7 @@
 
 
 
-        let num = [23, 45, 76, 77, 90, 90, 90, 44];
+        let num = [ 45, 76, 77,77 ,90, 90, 44];
         let sortedArray=num.sort();
         let n = num.length;
         let temp = num[n - 1];

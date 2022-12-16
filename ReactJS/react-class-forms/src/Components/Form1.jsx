@@ -1,36 +1,48 @@
 import React, { Component } from "react";
 
-export default class Person extends Component {
+export default class Form1 extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       person: {
-        fname: "",
-        lname: "",
-        email: "",
+        Name: "",
+        UserName: "",
+        Email: "",
+        Password:"",
+        Confirm :"",
+        Massage:""
       },
       allUser: [
         {
-          fname: "Mohan",
-          lname: "Krishna",
-          email: "MohanKrishna@gmail.com",
+          Name: "Mohan",
+          UserName: "Krishna",
+          Email: "MohanKrishna@gmail.com",
+          Password:"Mohan@123",
+          Confirm:"Mohan@123",
+          Massage:"My name is Mohan Krishna"
         },
         {
-          fname: "Raghu",
-          lname: "Sai",
-          email: "Raghusai@gmail.com",
+          Name: "Raghu",
+          UserName: "Sai",
+          Email: "Raghusai@gmail.com",
+          Password:"Raghu@123",
+          Confirm:"Raghu@123",
+          Massage:"My name is RaghuSai"
         },
         {
-          fname: "Bhanu",
-          lname: "Prasad",
-          email: "BhanuPrasad@gmail.com",
+          Name: "Bhanu",
+          UserName: "Prasad",
+          Email: "BhanuPrasad@gmail.com",
+          Password:"Bhanu@123",
+          Confirm:"Bhanu@123",
+          Massage:"My name is Bhanu Prasad"
         },
       ],
       editIndex :null
     };
   }
-  addUser = () => {
+  Send = () => {
     console.log(this.state.person);
     var newAllUsers = [...this.state.allUser];
     newAllUsers.push(this.state.person);
@@ -49,9 +61,12 @@ export default class Person extends Component {
 
   clearForm = () => {
     var newForm = {
-      fname: "",
-      lname: "",
-      email: "",
+      Name: "",
+      UserName: "",
+      Email: "",
+      Password:"",
+      Confirm:"",
+      Massage:""
     };
     this.setState({ person: newForm });
   };
@@ -63,7 +78,7 @@ export default class Person extends Component {
 
   deleteUser = (user) => {
     console.log(user);
-    var latestUser = this.state.allUser.filter((myUser)=>myUser.email !=user.email)
+    var latestUser = this.state.allUser.filter((myUser)=>myUser.Massage !=user.Massage)
     this.setState({allUser:latestUser})
   };
   updateUser=()=>{
@@ -76,18 +91,28 @@ export default class Person extends Component {
     return (
       <div>
         <form>
-          <lable htmlform="">First Name :</lable>
-          <input type="text" name="fname" value={this.state.person.fname} onChange={(e) => {this.handleChange(e)}}/>
+          <lable htmlform="">Name :</lable>
+          <input type="text" name="Name" value={this.state.person.Name} onChange={(e) => {this.handleChange(e)}}/>
           <br />
-          <lable htmlform="">Last Name :</lable>
-          <input type="text" name="lname" value={this.state.person.lname} onChange={(e) => {this.handleChange(e)}}/>
+          <lable htmlform="">UserName :</lable>
+          <input type="text" name="UserName" value={this.state.person.UserName} onChange={(e) => {this.handleChange(e)}}/>
           <br />
           <lable htmlform="">Email</lable>
-          <input type="text" name="email" value={this.state.person.email} onChange={(e) => {this.handleChange(e)}}/>
+          <input type="text" name="Email" value={this.state.person.Email} onChange={(e) => {this.handleChange(e)}}/>
+          <br/>
+          <lable htmlform="">Password</lable>
+          <input type="text" name="Password" value={this.state.person.Password} onChange={(e) => {this.handleChange(e)}}/>
+          <br/>
+          <lable htmlform="">Confirm</lable>
+          <input type="text" name="Confirm" value={this.state.person.Confirm} onChange={(e) => {this.handleChange(e)}}/>
+          <br/>
+          <lable htmlform="">Massage</lable>
+          <input type="text" name="Massage" value={this.state.person.Massage} onChange={(e) => {this.handleChange(e)}}/>
+          <br/>
           <br />
           {/* terminory operator for addUser and updateUser */}
           {this.state.editIndex !==null ?<button type="button" onClick={this.updateUser} className="btn btn-primary">update User</button> 
-          :  <button type="button" onClick={this.addUser} className="btn btn-primary">Add User</button>}
+          :  <button type="button" onClick={this.Send} className="btn btn-primary">Send</button>}
           {/* <button type="button" onClick={this.addUser} className="btn btn-primary">Add User</button>
           <button type="button" onClick={this.updateUser} className="btn btn-primary">update User</button> */}
         </form>
@@ -95,9 +120,12 @@ export default class Person extends Component {
         <table className="table">
           <thead>
             <tr>
-              <th>First</th>
-              <th>Last</th>
-              <th>Handle</th>
+              <th>Name</th>
+              <th>UserName</th>
+              <th>Email</th>
+              <th>Password</th>
+              <th>Confirm</th>
+              <th>Massage</th>
               <th>Edit</th>
               <th>Delete</th>
             </tr>
@@ -105,9 +133,12 @@ export default class Person extends Component {
           <tbody>
             {this.state.allUser.map((user,i) => (
               <tr key={i}>
-                <td>{user.fname}</td>
-                <td>{user.lname}</td>
-                <td>{user.email}</td>
+                <td>{user.Name}</td>
+                <td>{user.UserName}</td>
+                <td>{user.Email}</td>
+                <td>{user.Password}</td>
+                <td>{user.Confirm}</td>
+                <td>{user.Massage}</td>
                 <td>
                   {/* if we pass the user in first paranthesis in onClick it will become synthetic event */}
                   <button className="btn btn-warning" onClick={() => {this.editUser(user,i) }}>Edit</button>

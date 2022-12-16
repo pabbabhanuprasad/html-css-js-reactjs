@@ -1,36 +1,44 @@
 import React, { Component } from "react";
 
-export default class Person extends Component {
+export default class Form2 extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       person: {
-        fname: "",
-        lname: "",
-        email: "",
+        FirstName: "",
+        LastName: "",
+        DateofBirth:"",
+        Emailid: "",
+        MobileNumber:""
       },
       allUser: [
         {
-          fname: "Mohan",
-          lname: "Krishna",
-          email: "MohanKrishna@gmail.com",
+          FirstName: "Mohan",
+          LastName: "Krishna",
+          DateofBirth:"12-02-2000",
+          Emailid: "MohanKrishna@gmail.com",
+          MobileNumber:"45667784"
         },
         {
-          fname: "Raghu",
-          lname: "Sai",
-          email: "Raghusai@gmail.com",
+          FirstName: "Raghu",
+          LastName: "Sai",
+          DateofBirth:"31-10-2000",
+          Emailid: "Raghusai@gmail.com",
+          MobileNumber:"4556678"
         },
         {
-          fname: "Bhanu",
-          lname: "Prasad",
-          email: "BhanuPrasad@gmail.com",
+          FirstName: "Bhanu",
+          LastName: "Prasad",
+          DateofBirth:"22-01-2000",
+          Emailid: "BhanuPrasad@gmail.com",
+          MobileNumber:"34578894"
         },
       ],
       editIndex :null
     };
   }
-  addUser = () => {
+  SUBMIT = () => {
     console.log(this.state.person);
     var newAllUsers = [...this.state.allUser];
     newAllUsers.push(this.state.person);
@@ -49,9 +57,11 @@ export default class Person extends Component {
 
   clearForm = () => {
     var newForm = {
-      fname: "",
-      lname: "",
-      email: "",
+      FirstName: "",
+      LastName: "",
+      DateofBirth:"",
+      Emailid: "",
+      MobileNumber:""
     };
     this.setState({ person: newForm });
   };
@@ -63,7 +73,7 @@ export default class Person extends Component {
 
   deleteUser = (user) => {
     console.log(user);
-    var latestUser = this.state.allUser.filter((myUser)=>myUser.email !=user.email)
+    var latestUser = this.state.allUser.filter((myUser)=>myUser.Emailid !=user.Emailid)
     this.setState({allUser:latestUser})
   };
   updateUser=()=>{
@@ -77,17 +87,24 @@ export default class Person extends Component {
       <div>
         <form>
           <lable htmlform="">First Name :</lable>
-          <input type="text" name="fname" value={this.state.person.fname} onChange={(e) => {this.handleChange(e)}}/>
+          <input type="text" name="First Name" value={this.state.person.FirstName} onChange={(e) => {this.handleChange(e)}}/>
           <br />
           <lable htmlform="">Last Name :</lable>
-          <input type="text" name="lname" value={this.state.person.lname} onChange={(e) => {this.handleChange(e)}}/>
+          <input type="text" name="Last Name" value={this.state.person.LastName} onChange={(e) => {this.handleChange(e)}}/>
           <br />
-          <lable htmlform="">Email</lable>
-          <input type="text" name="email" value={this.state.person.email} onChange={(e) => {this.handleChange(e)}}/>
-          <br />
+          <lable htmlform="">Date of Birth</lable>
+          <input type="date" name="Date of Birth" value={this.state.person.DateofBirth} onChange={(e) => {this.handleChange(e)}}/>
+          <br/>
+          <lable htmlform="">Emailid</lable>
+          <input type="text" name="Emailid" value={this.state.person.Emailid} onChange={(e) => {this.handleChange(e)}}/>
+          <br/>
+          <lable htmlform="">Mobile Number</lable>
+          <input type="text" name="MobileNumber" value={this.state.person.MobileNumber} onChange={(e) => {this.handleChange(e)}}/>
+          <br/>
+         
           {/* terminory operator for addUser and updateUser */}
           {this.state.editIndex !==null ?<button type="button" onClick={this.updateUser} className="btn btn-primary">update User</button> 
-          :  <button type="button" onClick={this.addUser} className="btn btn-primary">Add User</button>}
+          :  <button type="button" onClick={this.SUBMIT} className="btn btn-primary">SUBMIT</button>}
           {/* <button type="button" onClick={this.addUser} className="btn btn-primary">Add User</button>
           <button type="button" onClick={this.updateUser} className="btn btn-primary">update User</button> */}
         </form>
@@ -95,9 +112,11 @@ export default class Person extends Component {
         <table className="table">
           <thead>
             <tr>
-              <th>First</th>
-              <th>Last</th>
-              <th>Handle</th>
+              <th>FirstName</th>
+              <th>LastName</th>
+              <th>DateofBirth</th>
+              <th>Emailid</th>
+              <th>MobileNumber</th>
               <th>Edit</th>
               <th>Delete</th>
             </tr>
@@ -105,9 +124,11 @@ export default class Person extends Component {
           <tbody>
             {this.state.allUser.map((user,i) => (
               <tr key={i}>
-                <td>{user.fname}</td>
-                <td>{user.lname}</td>
-                <td>{user.email}</td>
+                <td>{user.FirstName}</td>
+                <td>{user.LastName}</td>
+                <td>{user.DateofBirth}</td>
+                <td>{user.Emailid}</td>
+                <td>{user.MobileNumber}</td>
                 <td>
                   {/* if we pass the user in first paranthesis in onClick it will become synthetic event */}
                   <button className="btn btn-warning" onClick={() => {this.editUser(user,i) }}>Edit</button>

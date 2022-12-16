@@ -1,31 +1,40 @@
 import React, { Component } from "react";
 
-export default class Person extends Component {
+export default class Form4 extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       person: {
-        fname: "",
-        lname: "",
-        email: "",
-      },
+        Street: "",
+        City: "",
+        State:"",
+        ZipCode: "",
+       Country:""
+    },
       allUser: [
         {
-          fname: "Mohan",
-          lname: "Krishna",
-          email: "MohanKrishna@gmail.com",
+            Street: "Street-1",
+            City: "Vijayawada",
+            State:"AP",
+            ZipCode: "345566",
+           Country:"India"
         },
         {
-          fname: "Raghu",
-          lname: "Sai",
-          email: "Raghusai@gmail.com",
+            Street: "Street-3",
+            City: "Rajahmandry",
+            State:"AP",
+            ZipCode: "345678",
+           Country:"India"
         },
         {
-          fname: "Bhanu",
-          lname: "Prasad",
-          email: "BhanuPrasad@gmail.com",
+            Street: "Street-7",
+            City: "Tanuku",
+            State:"AP",
+            ZipCode: "534211",
+           Country:"India"
         },
+        
       ],
       editIndex :null
     };
@@ -49,9 +58,11 @@ export default class Person extends Component {
 
   clearForm = () => {
     var newForm = {
-      fname: "",
-      lname: "",
-      email: "",
+      Street: "",
+      City: "",
+      State:"",
+      ZipCode: "",
+      Country:""
     };
     this.setState({ person: newForm });
   };
@@ -63,7 +74,7 @@ export default class Person extends Component {
 
   deleteUser = (user) => {
     console.log(user);
-    var latestUser = this.state.allUser.filter((myUser)=>myUser.email !=user.email)
+    var latestUser = this.state.allUser.filter((myUser)=>myUser.Country !=user.Country)
     this.setState({allUser:latestUser})
   };
   updateUser=()=>{
@@ -76,18 +87,27 @@ export default class Person extends Component {
     return (
       <div>
         <form>
-          <lable htmlform="">First Name :</lable>
-          <input type="text" name="fname" value={this.state.person.fname} onChange={(e) => {this.handleChange(e)}}/>
+          <h2>Address</h2><hr/>
+          <lable htmlform="">Street :</lable>
+          <input type="text" name="Street" value={this.state.person.Street} onChange={(e) => {this.handleChange(e)}}/><br/>
+          <input type="text" name="Street" value={this.state.person.Street} onChange={(e) => {this.handleChange(e)}}/>
           <br />
-          <lable htmlform="">Last Name :</lable>
-          <input type="text" name="lname" value={this.state.person.lname} onChange={(e) => {this.handleChange(e)}}/>
+          <lable htmlform="">City :</lable>
+          <input type="text" name="City" value={this.state.person.City} onChange={(e) => {this.handleChange(e)}}/>
           <br />
-          <lable htmlform="">Email</lable>
-          <input type="text" name="email" value={this.state.person.email} onChange={(e) => {this.handleChange(e)}}/>
-          <br />
+          <lable htmlform="">State</lable>
+          <input type="text" name="State" value={this.state.person.State} onChange={(e) => {this.handleChange(e)}}/>
+          <br/>
+          <lable htmlform="">ZipCode</lable>
+          <input type="text" name="ZipCode" value={this.state.person.ZipCode} onChange={(e) => {this.handleChange(e)}}/>
+          <br/>
+          <lable htmlform="">Country</lable>
+          <input type="text" name="Country" value={this.state.person.Country} onChange={(e) => {this.handleChange(e)}}/>
+          <br/>
+          
           {/* terminory operator for addUser and updateUser */}
           {this.state.editIndex !==null ?<button type="button" onClick={this.updateUser} className="btn btn-primary">update User</button> 
-          :  <button type="button" onClick={this.addUser} className="btn btn-primary">Add User</button>}
+          :  <button type="button" onClick={this.addUser} className="btn btn-primary">addUser</button>}
           {/* <button type="button" onClick={this.addUser} className="btn btn-primary">Add User</button>
           <button type="button" onClick={this.updateUser} className="btn btn-primary">update User</button> */}
         </form>
@@ -95,9 +115,11 @@ export default class Person extends Component {
         <table className="table">
           <thead>
             <tr>
-              <th>First</th>
-              <th>Last</th>
-              <th>Handle</th>
+              <th>Street</th>
+              <th>City</th>
+              <th>State</th>
+              <th>ZipCode</th>
+              <th>Country</th>
               <th>Edit</th>
               <th>Delete</th>
             </tr>
@@ -105,9 +127,11 @@ export default class Person extends Component {
           <tbody>
             {this.state.allUser.map((user,i) => (
               <tr key={i}>
-                <td>{user.fname}</td>
-                <td>{user.lname}</td>
-                <td>{user.email}</td>
+                <td>{user.Street}</td>
+                <td>{user.City}</td>
+                <td>{user.State}</td>
+                <td>{user.ZipCode}</td>
+                <td>{user.Country}</td>
                 <td>
                   {/* if we pass the user in first paranthesis in onClick it will become synthetic event */}
                   <button className="btn btn-warning" onClick={() => {this.editUser(user,i) }}>Edit</button>

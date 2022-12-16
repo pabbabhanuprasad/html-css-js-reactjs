@@ -28,6 +28,7 @@ export class Users extends Component {
   editUser=()=>{
     var newUser={
         fname:"Bhanu",
+        lname:"Prasad",
         email:"Bhanu@gmail.com"
     }
     this.setState({person: newUser})
