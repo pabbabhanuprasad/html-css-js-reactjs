@@ -119,9 +119,9 @@ export default class Form3 extends Component {
                 <h2>Univeristy Registration Details</h2> <br />
                 <form>
                     <label htmlFor="">University : </label>
-                    <input type="text" name="university" value={this.state.RegistrationDetails.university} onChange={(e) => { this.handleChange(e) }} /> <br />
+                    <input type="text" name="university" value={this.state.RegistrationDetails.university} onChange={(e) => { this.handleChange(e) }} /> <br /><br />
                     <label htmlFor="">Insitute : </label>
-                    <input type="text" name="institute" value={this.state.RegistrationDetails.institute} onChange={(e) => { this.handleChange(e) }} /> <br />
+                    <input type="text" name="institute" value={this.state.RegistrationDetails.institute} onChange={(e) => { this.handleChange(e) }} /> <br /><br />
                     <label htmlFor="">Branch : </label>
                     <select name="branch" value={this.state.RegistrationDetails.branch}  onChange={(e) => { this.handleChange(e) }}>
                         <option value={""}>select branch</option>
@@ -130,13 +130,13 @@ export default class Form3 extends Component {
                         <option value={"EEE"}>EEE</option>
                         <option value={"CIVIL"}>CIVIL</option>
                         <option value={"MECH"}>MECH</option>
-                    </select> <br />
+                    </select> <br /><br />
                     <label htmlFor="">Degree : </label>
                     <select name="degree" value={this.state.RegistrationDetails.degree}  onChange={(e) => { this.handleChange(e) }}>
                         <option value={""}>Degree</option>
                         <option value={"B.Tech"}>B.Tech</option>
                         <option value={"M.Tech"}>M.Tech</option>
-                    </select> <br />
+                    </select> <br /><br />
                     
                     <input type="radio" name="status" checked={this.state.RegistrationDetails.status == "Completed"} value={"Completed"} onChange={(e) => { this.handleChange(e) }} />
                     <label htmlFor="">Completed</label> <br />

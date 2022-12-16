@@ -89,18 +89,18 @@ export default class Form4 extends Component {
         <form>
           <h2>Address</h2><hr/>
           <lable htmlform="">Street :</lable>
-          <input type="text" name="Street" value={this.state.person.Street} onChange={(e) => {this.handleChange(e)}}/><br/>
+          <input type="text" name="Street" value={this.state.person.Street} onChange={(e) => {this.handleChange(e)}}/><br/><br />
           <input type="text" name="Street" value={this.state.person.Street} onChange={(e) => {this.handleChange(e)}}/>
-          <br />
+          <br /><br />
           <lable htmlform="">City :</lable>
           <input type="text" name="City" value={this.state.person.City} onChange={(e) => {this.handleChange(e)}}/>
-          <br />
+          <br /><br />
           <lable htmlform="">State</lable>
           <input type="text" name="State" value={this.state.person.State} onChange={(e) => {this.handleChange(e)}}/>
-          <br/>
+          <br/><br />
           <lable htmlform="">ZipCode</lable>
           <input type="text" name="ZipCode" value={this.state.person.ZipCode} onChange={(e) => {this.handleChange(e)}}/>
-          <br/>
+          <br/><br />
           <lable htmlform="">Country</lable>
           <input type="text" name="Country" value={this.state.person.Country} onChange={(e) => {this.handleChange(e)}}/>
           <br/>
