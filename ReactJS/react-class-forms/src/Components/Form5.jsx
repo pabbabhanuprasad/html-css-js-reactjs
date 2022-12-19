@@ -103,7 +103,7 @@ export default class Form5 extends Component {
           <select>
                         <option value={"I am a Man"}>I am a Man</option>
                         <option value={"My name is Bhanu Prasad"}>My name is Bhanu Prasad</option><br/>
-                        </select><br/><br/>
+          </select><br/><br/>
           <lable htmlform="">DateofBirth:</lable>
           <select name="DateofBirth" value={this.state.person.DateofBirth}  onChange={(e) => { this.handleChange(e) }}>
                         <option value={""}>Year</option>
