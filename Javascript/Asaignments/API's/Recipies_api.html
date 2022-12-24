@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <button onClick="getData()">Get Data from Callback</button>
+    <!-- <button onClick="getData()">Get Data from Promise</button> -->
+    <!-- <button onClick="getData()">Get Data from Async_Await</button> -->
+    <div>
+      <ul></ul>
+    </div>
+
+    <script>
+      var data = [];
+      function getData() {
+        var getInfo = new XMLHttpRequest();
+        getInfo.onreadystatechange = function () {
+          if (getInfo.readyState == 4 && getInfo.status == 200) {
+            data = JSON.parse(getInfo.response);
+            displayAllimages();
+          }
+        };
+        getInfo.open("GET", "http://localhost:3002/recipes");
+        getInfo.send();
+      }
+      function displayAllimages() {
+        console.log(data);
+        data.forEach((element) => {
+          element.extendedIngredients.forEach((ele) => {
+            console.log("image:", ele.image);
+            var myLi = document.createElement("li");
+            myLi.innerHTML = ele.image;
+            document.querySelector("ul").appendChild(myLi);
+          });
+        });
+      }
+    </script>
+
+
+    <!-- <script>
+  var data = [];
+  function getData() {
+      return new Promise((resolve, reject) => {
+          var getInfo = new XMLHttpRequest()
+          getInfo.onreadystatechange = function () {
+              if (getInfo.readyState == 4 && getInfo.status == 200) {
+                  data = JSON.parse(getInfo.response);
+                  resolve(data)
+              }
+          };
+          getInfo.open("GET", "http://localhost:3002/recipes");
+          // getInfo.setRequestHeader("X-RapidAPI-Key", "IXEUAUo6gSmshyDa71pLNljSwKHRp1xt8bqjsn089SWjJ1GyuX");
+          // getInfo.setRequestHeader("X-RapidAPI-Host", "cricbuzz-cricket.p.rapidapi.com");
+          getInfo.send();
+      });
+
+  }
+  getData().then((data)=>{
+      console.log(data)
+      data.forEach((element)=>{
+          element.extendedIngredients.forEach(ele=>{
+              console.log("image:",ele.image);
+              var myLi = document.createElement("li")
+              myLi.innerHTML=ele.image;
+              document.querySelector("ul").appendChild(myLi)
+          })
+      })
+      
+  })
+</script> -->
+
+
+<!-- <script>
+  var data = [];
+  function getData() {
+      return new Promise((resolve, reject) => {
+          var getInfo = new XMLHttpRequest()
+          getInfo.onreadystatechange = function () {
+              if (getInfo.readyState == 4 && getInfo.status == 200) {
+                  data = JSON.parse(getInfo.response);
+                  resolve(data)
+              }
+          };
+          getInfo.open("GET", "http://localhost:3002/recipes");
+          getInfo.setRequestHeader("X-RapidAPI-Key", "IXEUAUo6gSmshyDa71pLNljSwKHRp1xt8bqjsn089SWjJ1GyuX");
+          getInfo.setRequestHeader("X-RapidAPI-Host", "cricbuzz-cricket.p.rapidapi.com");
+          getInfo.send();
+      });
+
+  }
+
+  async function handleAsyncData(){
+      data = await getData()
+      console.log(data)
+      data.forEach((element)=>{
+          element.extendedIngredients.forEach(ele=>{
+              console.log("image",ele.image);
+              var myLi = document.createElement("li")
+              myLi.innerHTML=ele.image;
+              document.querySelector("ul").appendChild(myLi)
+          })
+      })
+      
+  }
+
+  handleAsyncData()
+
+
+</script>   -->
+</body>
+</html>

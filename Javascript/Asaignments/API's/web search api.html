@@ -1,67 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Search api</title>
-</head>
+  <body>
+    <button onClick="getData()">Get Data from Callback</button>
+    <!-- <button onClick="getData()">Get Data from Promise</button> -->
+    <!-- <button onClick="getData()">Get Data from Async_Await</button> -->
+    <div>
+      <ul></ul>
+    </div>
 
-<body>
     <script>
-        var data = []
-        function getData() {
-            var getInfo = new XMLHttpRequest()
-            getInfo.onreadystatechange = function () {
-                if (getInfo.readyState == 4 && getInfo.status == 200) {
-                    data = JSON.parse(getInfo.response).typeMatches[0]
-                    console.log(JSON.parse(getInfo.response));
-                    displayAllSeriesNames()
-                }
-            }
-            getInfo.open("GET", "http://localhost:3000/value");
-            
-            getInfo.send();
-        }
-        function displayAllSeriesNames() {
-        //     // we cannot display the object by using Foreach()
-        //     data.seriesMatches.forEach((series) => {
-        //         // if we want to display only seriesAdWrapper
-        //         if (series.seriesAdWrapper) {
-        //             console.log(series);
-        //             var myLi = document.createElement("li")
-        //             myLi.innerHTML=series.seriesAdWrapper.seriesName;
-        //             document.querySelector("ul").appendChild(myLi)
-        //         }
-        //     })
-        }
-        displayAllSeriesNames() 
-
+      var data = [];
+      function getData() {
+        var getInfo = new XMLHttpRequest();
+        getInfo.onreadystatechange = function () {
+          if (getInfo.readyState == 4 && getInfo.status == 200) {
+            data = JSON.parse(getInfo.response);
+            // console.log(JSON.parse(getInfo.response));
+            displayAllnames();
+          }
+        };
+        getInfo.open("GET", "http://localhost:3006/value");
+        // getInfo.setRequestHeader("X-RapidAPI-Key", "IXEUAUo6gSmshyDa71pLNljSwKHRp1xt8bqjsn089SWjJ1GyuX");
+        // getInfo.setRequestHeader("X-RapidAPI-Host", "cricbuzz-cricket.p.rapidapi.com");
+        getInfo.send();
+      }
+      function displayAllnames() {
+        console.log(data);
+        data.forEach((element) => {
+        //   element.extendedIngredients.forEach((ele) => {
+            console.log("name:", element.provider.name);
+            var myLi = document.createElement("li");
+            myLi.innerHTML = element.provider.name;
+            document.querySelector("ul").appendChild(myLi);
+          });
+        };
     </script>
 
     <!-- <script>
-         //Promise method
-        function getData() {
-            return new Promise((resolve, reject) => {
-                var getInfo = new XMLHttpRequest()
-                getInfo.onreadystatechange = function () {
-                    if (getInfo.readyState == 4 && getInfo.status == 200) {
-                        data = JSON.parse(getInfo.response);
-                        resolve(data)
-                    }
-                };
-                getInfo.open("GET", "http://localhost:3000/value");
-                getInfo.send();
-            });
+  var data = [];
+  function getData() {
+      return new Promise((resolve, reject) => {
+          var getInfo = new XMLHttpRequest()
+          getInfo.onreadystatechange = function () {
+              if (getInfo.readyState == 4 && getInfo.status == 200) {
+                  data = JSON.parse(getInfo.response);
+                  resolve(data)
+              }
+          };
+          getInfo.open("GET", "http://localhost:3006/value");
+          getInfo.send();
+      });
 
-        }
-        getData().then((data) => {
-            console.log(data)
-        })
+  }
+  getData().then((data)=>{
+      console.log(data)
+      data.forEach((element)=>{
+              console.log("name:",element.provider.name);
+              var myLi = document.createElement("li")
+              myLi.innerHTML=element.provider.name;
+              document.querySelector("ul").appendChild(myLi)
+          })
+      })
+      
+
+</script> -->
+
+    <!-- <script>
+      var data = [];
+      function getData() {
+        return new Promise((resolve, reject) => {
+          var getInfo = new XMLHttpRequest();
+          getInfo.onreadystatechange = function () {
+            if (getInfo.readyState == 4 && getInfo.status == 200) {
+              data = JSON.parse(getInfo.response);
+              resolve(data);
+            }
+          };
+          getInfo.open("GET", "http://localhost:3006/value");
+          getInfo.send();
+        });
+      }
+
+      async function handleAsyncData() {
+        data = await getData();
+        console.log(data);
+        data.forEach((element) => {
+            console.log("name:", element.provider.name);
+            var myLi = document.createElement("li");
+            myLi.innerHTML = element.provider.name;
+            document.querySelector("ul").appendChild(myLi);
+          });
+        };
+      
+
+      handleAsyncData();
     </script> -->
-
-
-</body>
-
+  </body>
 </html>

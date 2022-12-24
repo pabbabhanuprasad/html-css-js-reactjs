@@ -126,13 +126,6 @@
             }
           },
           {
-            "adDetail": {
-              "name": "native_matches",
-              "layout": "native_large",
-              "position": 1
-            }
-          },
-          {
             "seriesAdWrapper": {
               "seriesId": 4492,
               "seriesName": "England tour of Pakistan, 2022",
@@ -9385,6 +9378,5 @@
     "appIndex": {
       "seoTitle": "Live Cricket Score - Scorecard and Match Results",
       "webURL": "www.cricbuzz.com/live-cricket-scores/"
-    },
-    "responseLastUpdated": "1670429401"
+    }
   }

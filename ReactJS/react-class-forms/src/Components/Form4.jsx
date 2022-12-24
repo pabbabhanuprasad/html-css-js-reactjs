@@ -25,14 +25,14 @@ export default class Form4 extends Component {
             City: "Rajahmandry",
             State:"AP",
             ZipCode: "345678",
-           Country:"India"
+           Country:"US"
         },
         {
             Street: "Street-7",
             City: "Tanuku",
             State:"AP",
             ZipCode: "534211",
-           Country:"India"
+           Country:"UK"
         },
         
       ],
