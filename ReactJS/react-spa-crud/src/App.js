@@ -5,16 +5,17 @@ import LayOut from "./Components/LayOut";
 import EditUser from "./Components/EditUser";
 import DeleteUser from "./Components/DeleteUser";
 import CreateUser from "./Components/CreateUser";
-import User from "./Components/User";
+import Users from "./Components/Users"
+
 function App() {
   return (
     <div className="App">
-      {/* //  {/* <Users/> */}
+     
 
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LayOut />}>
-          <Route index element={<User />}/>
+          <Route index element={<Users />}/>
             <Route path="/edit" element={<EditUser />} />
             <Route path="/delete" element={<DeleteUser />} />
             <Route path="/create" element={<CreateUser />} />

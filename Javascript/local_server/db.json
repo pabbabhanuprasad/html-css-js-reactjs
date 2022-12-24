@@ -1,4 +1,22 @@
 {
   "users": [
+    {
+      "id": 1,
+      "name": "Mohan Krishna",
+      "username": "Bret",
+      "email": "Sincere@april.biz"
+    },
+    {
+      "id": 2,
+      "name": "Raghu Sai",
+      "username": "Bret",
+      "email": "Sincere@april.biz"
+    },
+    {
+      "id": 3,
+      "name": "Bhanu Prasad",
+      "username": "Bret",
+      "email": "Sincere@april.biz"
+    }
   ]
 }
