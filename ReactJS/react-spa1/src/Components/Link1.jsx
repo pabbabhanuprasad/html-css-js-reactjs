@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Link1 = () => {
+const Link1 = () => {
   return (
     <div>
         <h2>This is from Link1 Component!</h2>
