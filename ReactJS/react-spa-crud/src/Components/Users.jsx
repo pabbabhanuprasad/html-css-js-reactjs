@@ -10,7 +10,7 @@ const Users = () => {
   }, []);
 
   const getAllUsers = async () => {
-    const response = await (await fetch("http://localhost:3008/users")).json();
+    const response = await (await fetch("http://localhost:3006/users")).json();
     setUsers(response);
     
 

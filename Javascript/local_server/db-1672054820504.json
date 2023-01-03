@@ -3,21 +3,18 @@
     {
       "id": 1,
       "name": "Mohan Krishna",
-      "cgpa":"7.8",
       "username": "Bret",
       "email": "Sincere@april.biz"
     },
     {
       "id": 2,
       "name": "Raghu Sai",
-      "cgpa":"7.9",
       "username": "Bret",
       "email": "Sincere@april.biz"
     },
     {
       "id": 3,
       "name": "Bhanu Prasad",
-      "cgpa":"5.8",
       "username": "Bret",
       "email": "Sincere@april.biz"
     }

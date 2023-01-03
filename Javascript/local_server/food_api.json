@@ -1,0 +1,40 @@
+{
+  "fooditems": [
+       {
+          "image": "https://www.fiahomefoods.com/uploads/products/mixed-asorted-love-bites_1662034145.jpg",
+          "name": "Assorted/Mixed LoveBites"
+          
+        },
+        {
+          "image": "https://www.fiahomefoods.com/uploads/products/mixed-asorted-love-bites_1662034145.jpg",
+          "name": "Kaju Bites"
+          
+        },
+        {
+          "image": "https://www.fiahomefoods.com/uploads/products/mixed-asorted-love-bites_1662034145.jpg",
+          "name": "Badam Bites"
+          
+        },
+        {
+          "image": "https://www.fiahomefoods.com/uploads/products/mixed-asorted-love-bites_1662034145.jpg",
+          "name": "Strawberry Bites"
+        },
+        {
+          "image": "https://www.fiahomefoods.com/uploads/products/mixed-asorted-love-bites_1662034145.jpg",
+          "name": "Chocolate Bites"
+        },
+        {
+          "image": "https://www.fiahomefoods.com/uploads/products/mixed-asorted-love-bites_1662034145.jpg",
+          "name": "Orange Bites"
+        },
+        {
+          "image": "https://www.fiahomefoods.com/uploads/products/mixed-asorted-love-bites_1662034145.jpg",
+          "name": "Kesar Bites"
+        }
+      ],
+      "lovebites":[
+        
+      ]
+    }
+  
+

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <style>
+      #container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        width:50%;
+      }
+      
+    </style>
+  </head>
+  <body style="width:100vw">
+    <div>
+    
+      <div id="container" > </div>
+   
+
+    <script>
+      var fooditems = [];
+      function getData() {
+        return new Promise((resolve, reject) => {
+          var data = new XMLHttpRequest();
+          data.onreadystatechange = function () {
+            if (data.readyState == 4 && data.status == 200) {
+              fooditems = JSON.parse(data.response);
+              display(fooditems);
+              console.log(fooditems);
+              resolve(fooditems);
+            }
+          };
+          data.open("GET", "http://localhost:3005/fooditems");
+          data.send();
+        });
+      }
+      getData();
+
+      async function allData() {
+        try {
+          var Data = await getdata();
+          display();
+          console.log("connected");
+        } catch {
+          console.log("not connected");
+        }
+      }
+
+      function display(fooditems) {
+        fooditems.forEach((ele) => {
+          var div = document.createElement("div");
+          div.setAttribute("class", "card m-3");
+          div.style.width = "5rem";
+          var img = document.createElement("img");
+          img.setAttribute("class", "card-img-top");
+          div.append(img);
+          var div2 = document.createElement("div");
+          div2.setAttribute("class", "card-body");
+          div.appendChild(div2);
+          var h5 = document.createElement("h5");
+          div2.prepend(h5);
+          var radio=document.createElement("input");
+          radio.setAttribute("type","radio");
+          var lable=document.createElement("lable");
+          lable.innerHTML="200grm-600grm";
+          div2.prepend(lable);
+          div2.prepend(radio);
+          var a = document.createElement("a");
+          a.setAttribute("class", "btn btn-primary");
+          a.innerHTML = "View More";
+          div.appendChild(a);
+          document.querySelector("#container").appendChild(div);
+
+          for (i in ele) {
+            console.log(ele[i]);
+            if (i == "image") {
+              img.setAttribute("src", ele[i]);
+              div.appendChild(img);
+            } else if (i == "name") {
+              h5.innerHTML = ele[i];
+              div2.appendChild(h5);
+            }
+          }
+        });
+      }
+     
+    </script>
+  </body>
+</html>

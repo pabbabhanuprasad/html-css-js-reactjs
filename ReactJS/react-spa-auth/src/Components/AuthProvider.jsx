@@ -11,13 +11,3 @@ const [user, setUser] = useState(null);
 }
 export default AuthProvider;
 
-// import React from 'react'
-//  const AuthProvider = (props) => {
-//     console.log(props);
-//   return (
-//     <div>
-//         {props.children}
-//     </div>
-//   )
-// }
-// export default AuthProvider
