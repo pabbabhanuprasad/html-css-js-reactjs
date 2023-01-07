@@ -9,7 +9,7 @@ import { createStore } from "redux";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 const defaultState = {
-  users: ["Mohan", "Raghu", "Bhanu"],
+  names: ["HTML","CSS","JAVASCRIPT","BOOTSTRAP"],
   books: [],
   projects: [],
   products: [],
@@ -19,12 +19,12 @@ const defaultState = {
 const reducer = (state = defaultState, action) => {
   switch (action.type) {
     case "Add_User":
-      let newUsers=[...state.users]
+      let newUsers=[...state.names]
       newUsers.push(action.payload)
-      return {...state,users:newUsers}
+      return {...state,names:newUsers}
       case "Delete_User":
-      let deleteUsers={...state.users.filter((user)=>user !== action.payload)};
-      return {...state,users:deleteUsers}
+      let deleteUsers={...state.names.filter((user)=>user !== action.payload)};
+      return {...state,names:deleteUsers}
     default:
       return state;
   }

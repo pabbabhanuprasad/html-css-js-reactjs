@@ -19,8 +19,8 @@ class User extends Component {
 function mapStateToProps(state) {
   console.log(state);
   return {
-    // users:state.users,
-    Bhanu: state.users,
+    // names:state.names,
+    Bhanu: state.names,
   };
 }
 function mapDispatchToProps(dispatch) {
