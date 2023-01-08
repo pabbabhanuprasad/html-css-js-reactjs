@@ -9,7 +9,7 @@ import { createStore } from "redux";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 const defaultState = {
-  names: ["HTML","CSS","JAVASCRIPT","BOOTSTRAP"],
+  users: ["Mohan", "Raghu", "Bhanu"],
   books: [],
   projects: [],
   products: [],
@@ -19,12 +19,12 @@ const defaultState = {
 const reducer = (state = defaultState, action) => {
   switch (action.type) {
     case "Add_User":
-      let newUsers=[...state.names]
+      let newUsers=[...state.users]
       newUsers.push(action.payload)
-      return {...state,names:newUsers}
+      return {...state,users:newUsers}
       case "Delete_User":
-      let deleteUsers={...state.names.filter((user)=>user !== action.payload)};
-      return {...state,names:deleteUsers}
+      let deleteUsers=state.users.filter((user)=>user !== action.payload);
+      return {...state,users:deleteUsers}
     default:
       return state;
   }
@@ -44,3 +44,4 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+

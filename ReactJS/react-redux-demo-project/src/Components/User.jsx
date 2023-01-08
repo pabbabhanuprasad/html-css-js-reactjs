@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { addUserAction, deleteUserAction } from "./Action";
+import { addUserAction, deleteUserAction } from "../store/Actions";
+
 
 class User extends Component {
   render() {
@@ -9,9 +10,10 @@ class User extends Component {
       <div>
         <button onClick={this.props.addUser}>AddUser</button>
         <button onClick={this.props.deleteUser}>DeleteUser</button>
-      <ul>{this.props.allUsers && this.props.allUsers.map((user,i)=><li key={i} onClick={()=>{
-            this.props.deleteUser(user)
-          }}>{user}</li>)}</ul>
+        <ul>
+          {this.props.users && this.props.users.map((user, i) => (<li key={i} onClick={() => {
+             this.props.deleteUser(user)}}>{user}</li>))}
+        </ul>
       </div>
     );
   }
@@ -19,8 +21,8 @@ class User extends Component {
 function mapStateToProps(state) {
   console.log(state);
   return {
-    // users:state.users,
-    Bhanu: state.users,
+    users:state.users,
+    // Bhanu: state.users,
   };
 }
 function mapDispatchToProps(dispatch) {
