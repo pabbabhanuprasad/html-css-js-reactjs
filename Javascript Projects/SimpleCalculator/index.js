@@ -14,8 +14,12 @@
     if(screen.value===""){
         screen.value="Please enter";
     }else{
+      let intData=(screen.value)
+      
         let answer=eval(screen.value);
+        screen.value="",
         screen.value=answer;
+        console.log(answer);
     }
   })
   clear.addEventListener('click',function(e){

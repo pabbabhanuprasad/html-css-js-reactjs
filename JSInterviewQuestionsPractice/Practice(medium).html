@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div></div>
+
+    <!-- //Q.No:1.Write a function that converts an object into an array, where each element represents a key-value pair in the form of an array.
+// Examples :
+// 1.toArray({ a: 1, b: 2 }) ➞ [["a", 1], ["b", 2]] -->
+    <!-- <script>
+function objectToArray() {
+  var exampleObj = {
+    a: 1,
+    b: 2,
+    c: 3,
+  };
+  let mainArr = [];
+  let index = 0;
+  for (let key in exampleObj) {
+    let value;
+    if (exampleObj.hasOwnProperty(key)) {
+      value = exampleObj[key];
+    }
+    let arr = [];
+    arr[0] = key;
+    arr[1] = value;
+    mainArr[index] = arr;
+    index++;
+  }
+  console.log(mainArr);
+}
+objectToArray();
+</script> -->
+
+    <!-- example:2. toArray({ shrimp: 15, tots: 12 }) ➞ [["shrimp", 15], ["tots",12]]
+Q.No:2.Create a function that takes two numbers as arguments (num, length) and returns an array of multiples of num until the array length reaches length.
+Examples:1.arrayOfMultiples(7, 5) ➞ [7, 14, 21, 28, 35] -->
+    <script>
+      // function arrayOfMultiples(num, length) {
+      //   let arr = [];
+      //   for (let i = 1; i <= length; i++) {
+      //     arr[i - 1] = num * i;
+      //   }
+      //   console.log(arr);
+      // }
+      // arrayOfMultiples(7,5);
+    </script>
+
+    <!-- example:2.arrayOfMultiples(12, 10) ➞ [12, 24, 36, 48, 60, 72, 84, 96, 108, 120] -->
+    <script>
+      // function arrayOfMultiples(num, length) {
+      //   let arr = [];
+      //   for (let i = 1; i <= length; i++) {
+      //     arr[i - 1] = num * i;
+      //   }
+      //   console.log(arr);
+      // }
+      // arrayOfMultiples(12,10);
+    </script>
+
+    <!-- example:3.arrayOfMultiples(17, 6) ➞ [17, 34, 51, 68, 85, 102] -->
+    <script>
+      // function arrayOfMultiples(num, length) {
+      //   let arr = [];
+      //   for (let i = 1; i <= length; i++) {
+      //     arr[i - 1] = num * i;
+      //   }
+      //   console.log(arr);
+      // }
+      // arrayOfMultiples(17,6);
+    </script>
+
+    <!-- Q.No:3.Create the function that takes an array with objects and returns the sum of people's budgets.
+Examples :1.
+getBudgets([
+{ name: "John", age: 21, budget: 23000 },
+ { name: "Steve",  age: 32, budget: 40000 },
+  { name: "Martin",  age: 16, budget: 2700 }
+ ]) ➞ 65700 -->
+    <script>
+      // function getBudgets(arr1) {
+      //   let sum = 0;
+      //   arr1.forEach((element) => {
+      //     sum = sum + element.budget;
+      //   });
+      //   console.log(sum);
+      // }
+      // let arr= [
+      //   { name: "John", age: 21, budget: 23000 },
+      //   { name: "Steve",  age: 32, budget: 40000 },
+      //   { name: "Martin",  age: 16, budget: 2700 }
+      // ]
+      // getBudgets(arr);
+    </script>
+
+    <!-- example:2.
+getBudgets([
+ { name: "John",  age: 21, budget: 29000 },
+{ name: "Steve",  age: 32, budget: 32000 },
+{ name: "Martin",  age: 16, budget: 1600 }
+]) ➞ 62600 -->
+    <script>
+      // function getBudgets(arr1) {
+      //   let sum = 0;
+      //   arr1.forEach((element) => {
+      //     sum = sum + element.budget;
+      //   });
+      //   console.log(sum);
+      // }
+      // let arr= [
+      //  { name: "John",  age: 21, budget: 29000 },
+      //   { name: "Steve",  age: 32, budget: 32000 },
+      //   { name: "Martin",  age: 16, budget: 1600 }
+      // ]
+      // getBudgets(arr);
+    </script>
+
+    <!-- Q.No:4.Create a function that takes an array of objects like { name: "John", 
+notes: [3, 5, 4]} and returns an array of objects like { name: "John", 
+avgNote: 4 }. If a student has no notes (an empty array) then let's assume 
+avgNote: 0. -->
+    <script>
+      // function average(avr) {
+      //   avr.forEach((element) => {
+      //     let arr = element.notes;
+      //     if (arr.length == 0) {
+      //       element.notes = [0];
+      //     } else {
+      //       let sum = 0;
+      //       for (let ele in arr) {
+      //         sum = sum + ele;
+      //       }
+      //       let avg = sum / arr.length;
+      //       element.notes = [avg];
+      //     }
+      //   });
+      //   console.log(avr);
+      // }
+      // let avr = [
+      //   { name: "John", notes: [3, 5, 4] },
+      //   { name: "Bhanu", notes: [] },
+      // ];
+      // average(avr)
+    </script>
+
+    <!-- Q.No:6.Count each occurrence of number(can not use predefined function).
+Input: [1,6,3,1,5,9,7,2,1,9,3,7,8,9,10] , no find=7
+		Output: 1 present 2 times.
+				   2 present 1 times.
+				   3 present 2 times.
+ 				   5 present 1 times …….  Etc -->
+    <script>
+      // function countOccurences(arr) {
+      //   arr.sort();
+      //   let unique = [];
+      //   for (let i = 0; i < arr.length; i++) {
+      //     if (!unique.includes(arr[i])) {
+      //       unique[unique.length] = arr[i];
+      //       let count = 1;
+      //       for (let j = i + 1; j < arr.length; j++) {
+      //         if (arr[j] == arr[i]) {
+      //           count++;
+      //         }
+      //       }
+      //       console.log(arr[i] + " presenets " + count + " times");
+      //     } else {
+      //     }
+      //   }
+      // }
+      // let arr = [1,6,3,1,5,9,7,2,1,9,3,7,8,9,10];
+      // countOccurences(arr);
+    </script>
+    <script>
+      // let name;
+      // name={}
+      // console.log(name);
+    </script>
+    <script>
+      // let number=0;
+      // console.log(number++);
+      // console.log(++number);
+      // console.log(number);
+    </script>
+    <script>
+      const compare = () => {
+        const sanfoundry = 1;
+        const javascript = 1;
+        if (sanfoundry.toString() === javascript) return true;
+        else return false;
+      };
+    </script>
+  </body>
+</html>

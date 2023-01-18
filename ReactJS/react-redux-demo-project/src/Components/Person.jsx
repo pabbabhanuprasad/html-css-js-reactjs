@@ -1,60 +1,104 @@
-import React, { Component } from 'react'
-import { connect} from 'react-redux';
-import { addPersonAction } from '../store/Actions';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { addPersonAction } from "../store/Actions";
+import PersonsTable from "./PersonsTable";
 
 class Person extends Component {
-    constructor(props) {
-      super(props)
-    
-      this.state = {
-         fname:"",
-         lname:"",
-         email:""
+  constructor(props) {
+    super(props);
 
-      }
-      console.log(this.props);
-    }
-    handleChange=(e)=>{
-        let newUser={...this.state};
-        newUser[e.target.name]=e.target.value;
-        this.setState(newUser)
-    }
-addPerson=()=>{
-    console.log(this.state);
-    
-    this.props.addPerson(this.state)
-console.log(this.props.allPersons);
-}
+    this.state = {
+      fname: "",
+      lname: "",
+      email: "",
+    };
+  }
 
+  handleChange = (e) => {
+    let newUser = { ...this.state };
+    newUser[e.target.name] = e.target.value;
+    this.setState(newUser);
+  };
+
+  addPerson = () => {
+    this.props.addPerson(this.state);// from Where it is Coming ?
+    this.clearPersonForm()
+  };
+
+  clearPersonForm=()=>{
+    this.setState({
+        fname: "",
+        lname: "",
+        email: "",
+      })
+  }
   render() {
+    console.log(this.props);
+
     return (
-      <div>
-        <form>
-          <lable htmlform="">First Name :</lable>
-          <input type="text" name="fname" value={this.state.fname} onChange={(e) => {this.handleChange(e)}}/><br />
-          <lable htmlform="">Last Name :</lable>
-          <input type="text" name="lname" value={this.state.lname} onChange={(e) => {this.handleChange(e)}}/><br />
-          <lable htmlform="">Email</lable>
-          <input type="text" name="email" value={this.state.email} onChange={(e)=>{this.handleChange(e)}}/><br/>
-          <button type="button" onClick={this.addPerson}>Add User</button>
-          
-        </form>
-        <ul>
-            {this.props.allPersons.map((user,i)=><li key={i}>{user.fname}</li>)}
-        </ul>
+      <div className="container">
+        <div className="row">
+          <div className="col-4">
+            <form>
+              <label htmlFor="">First Name : </label>
+              <input
+                type="text"
+                name="fname"
+                value={this.state.fname}
+                onChange={(e) => {
+                  this.handleChange(e);
+                }}
+              />{" "}
+              <br /><br />
+              <label htmlFor="Last Name :">Last Name : </label>
+              <input
+                type="text"
+                name="lname"
+                value={this.state.lname}
+                onChange={(e) => {
+                  this.handleChange(e);
+                }}
+              />{" "}
+              <br /><br />
+              <label htmlFor="">Email : </label>
+              <input
+                type="text"
+                name="email"
+                value={this.state.email}
+                onChange={(e) => {
+                  this.handleChange(e);
+                }}
+              />{" "}
+              <br />
+              <button
+                type="button"
+                onClick={()=>{this.addPerson()}}
+                className="btn btn-primary"
+              >
+                Add User
+              </button>
+            </form>
+          </div>
+          <div className="col-8">
+            <PersonsTable />
+          </div>
+        </div>
       </div>
-    )
+    );
   }
 }
-function mapStateToProps(state){
-return {
 
-    allPersons:state.persons
+function mapStateToProps(state) {
+  console.log(state);
+  return {
+    allPersons: state.persons,
+  };
 }
+// Whatever mapDispatchToProps returns , will be accessable as Props In this Component
+function mapDispatchToProps(dispatch) {
+  return {
+    addPerson: (person) => dispatch(addPersonAction(person)), // From Where this funtion getting Dispatch Method
+  };
 }
-function mapDispatchToProps(){
-   return {
-    addPerson:(person)=>(addPersonAction(person))
-}
-}
-export default connect(mapStateToProps,mapDispatchToProps)(Person)
+
+export default connect(mapStateToProps, mapDispatchToProps)(Person);
