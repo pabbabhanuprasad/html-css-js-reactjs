@@ -20,16 +20,6 @@ function App() {
         },
       })
       .then((response) => setData(response.data));
-
-    // const options = {
-    //   method: "GET",
-    //   url: "https://weather-by-api-ninjas.p.rapidapi.com/v1/weather",
-    //   params: { city: "mumbai" },
-    //   headers: {
-    //     "X-RapidAPI-Key": "db469dda77msh2a858af8d4713e0p181b7ajsnd140358bc5e7",
-    //     "X-RapidAPI-Host": "weather-by-api-ninjas.p.rapidapi.com",
-    //   },
-    // };
   };
   return (
     <div className="col-md-12">

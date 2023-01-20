@@ -1,0 +1,23 @@
+#parent{
+    letter-spacing: -2px
+}
+.class1{
+    font-size: 30px;
+    font-weight: 700;
+    color: red;
+}
+#child1{
+    font-size: 30px;
+    font-weight: 700;
+    color: orangered;
+}
+#child2{
+    font-size: 30px;
+    font-weight: 700;
+    color: blue;
+}
+#child3{
+    font-size: 30px;
+    font-weight: 700;
+    color: green;
+}  

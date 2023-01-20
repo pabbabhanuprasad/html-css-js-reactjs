@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegExp pattern</title>
+    <style>
+        body {
+            background-color: rgb(114, 211, 114);
+        }
+    </style>
+</head>
+
+<body>
+    <form method="post" target="_blank">
+        <h2>Mobile Number:</h2>
+        <lable for="Mobile Number"></lable>
+        <input type="tel" id="mobile number" pattern="[9][0-9]{9}" />
+
+        <h2>User name:</h2>
+        <lable for="User Name"></lable>
+        <input type="text" id="Name of the User" pattern="^[A-Z][a-z]{1,}" />
+
+         <h2>Date Format:</h2>
+        <lable for="Date Format"></lable>
+        <input type="text" id="Date Format" pattern="[1-10]{1}-[1-12]{1}-[2][0-9]{3}" /> 
+
+        <h2>Enter your Email address:</h2>
+        <lable for="Email id"></lable>
+        <input type="text" id="email id" pattern="^[A-Z][a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}" /><br><br>
+
+        <input type="submit" value="submitt">
+        <input type="Reset" value="Reset">
+    </form>
+</body>
+
+</html>

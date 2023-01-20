@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <title>Flex Property implementation</title>
+    <style>
+        .flex-container{
+            display:flex;
+            background-color: yellow;
+            padding:10px;
+            border:2px solid green;
+        }
+        .flex-item{
+            /* display:inline-block; */
+            border:2px solid black;
+            background-color: rgb(10, 245, 10);
+            margin:10px;
+        }
+    </style>
+
+</head>
+<body>
+<h2>Flex Property implementation</h2>
+<p>
+    It is a layout used to rrange elements in 1D(row/column)
+    <dl>
+        <dt>
+            Flex container
+        </dt>
+        <dd>
+            The parent element that acts like a flixible box to its child element.
+        </dd>
+        <dt>
+            Flex item
+        </dt>
+        <dd>
+            Children of Flex-container. By default any element which is a child of flex container.
+        </dd>
+        <dt>
+            Main axis
+        </dt>
+        <dd>
+            Primary axis along which all the flex-item will be laid.
+        </dd>
+        <dt>
+            Cross axis
+        </dt>
+        <dd>
+            Axis perpendicular to the main axis
+        </dd>
+    </dl>
+</p>
+<div class="flex-container">
+    <div class="flex-item flex-item-1">Item 1</div>
+    <div class="flex-item flex-item-2">Item 2</div>
+    <div class="flex-item flex-item-3">Item 3</div>
+    <div class="flex-item flex-item-4">Item 4</div>
+    <div class="flex-item flex-item-5">Item 5</div>
+    <div class="flex-item flex-item-6">Item 6</div>
+    <div class="flex-item flex-item-7">Item 7</div>
+    <div class="flex-item flex-item-8">Item 8</div>
+    <div class="flex-item flex-item-9">Item 9</div>
+    <div class="flex-item flex-item-10">Item 10</div>
+</div>
+</body>
+</html>

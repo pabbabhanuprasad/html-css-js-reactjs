@@ -1,0 +1,206 @@
+.parent{
+    display:flex
+}
+.midile{
+    flex:5;
+    border-style:solid;
+    border-width: 2px;
+    border-color:blue;
+    padding:10px;
+    margin:10px;
+    height:500px;
+    /*width:500px;*/
+    /*width:200px;
+    Min-width: 200px;
+    width:1em;*/
+    outline-style:dashed;
+    outline-width:3px;
+    outline-color: red;
+    background-color:  rgb(146, 177, 177);
+    /* 200px+10px+10px+10px+10px+2px+2px=244px*/
+    box-sizing:border-box;
+}
+
+.blog-section1{
+    flex:1;
+    border-style:solid;
+    border-width: 2px;
+    border-color:blue;
+    padding:10px;
+    margin:10px;
+    height:500px;
+    /*width:500px;*/
+    /*width:200px;
+    Min-width: 200px;
+    width:1em;*/
+    outline-style:dashed;
+    outline-width:3px;
+    outline-color: red;
+    background-color:  rgb(146, 177, 177);
+    /* 200px+10px+10px+10px+10px+2px+2px=244px*/
+    box-sizing:border-box;
+    /*  200px -(10px+10px+10px+10px+2px+2px)=156px 
+    border- box=156px;
+    content-box=200px  */
+
+}
+
+.blog-section2{
+    border-style:solid;
+    border-width: 2px;
+    border-color:blue;
+    padding:10px;
+    margin:10px;
+    height:fit-content;
+    width:50%;
+    /*width:250px;
+    max-width:600px;
+    min-width:200px;*/
+    outline-style:dotted;
+    outline-width:4px;
+    outline-color:red;
+    background-color:  rgb(146, 177, 177);
+    /* 250px+10px+10px+10px+10px+2px+2px=294px*/
+    box-sizing:border-box;
+    /* 250px - (10px+10px+10px+10px+2px+2px) =206px */
+}
+.blog-section3{
+    border-style:solid;
+    border-width: 2px;
+    border-color:blue;
+    padding:10px;
+    margin:10px;
+    height:fit-content;
+    width:300px;
+    outline-style:double;
+    outline-width:5px;
+    outline-color: red;
+    background-color: rgb(146, 177, 177);
+    /* 300px+10px+10px+10px+10px+2px+2px=344px*/
+    box-sizing: border-box;
+    /* 300px - (10px+10px+10px+10px+2px+2px) =256px */
+}
+.blog-section4{
+    border-style:solid;
+    border-width: 2px;
+    border-color:blue;
+    padding:10px;
+    margin:10px;
+    height:fit-content;
+    width:350px;
+    outline-style:groove;
+    outline-width:6px;
+    outline-color:red;
+    background-color: rgb(146, 177, 177);
+    /* 350px+10px+10px+10px+10px+2px+2px=394px*/
+     box-sizing: border-box;
+     /* 350px - (10px+10px+10px+10px+2px+2px) =306px */
+}
+ 
+    /* colors in css:  0.PREDEFIND NAME
+                       1.RGB(red,green,blue) (0-255)
+                        RGBA(RED,GREEN,BLUE,ALPHA(TRANSPERANCY))(0-1)
+                       2.HEX
+                         #RRGGBB (00-FF)
+                       3.HSL(Hue, Saturation, Lightness)
+                          Hue-degree oncolor wheel
+                          saturation-degree of grayness
+                        HSLA-(A=TRANSPERANCY or OPECITY)
+                          Lightness-[0%(black)-100%(white)]
+    */
+.p1{
+    padding:10px;
+    color:rgb(255,0,0,0.9);
+    margin:10px;
+    background-color: white;
+    text-align: center;
+    text-decoration-line: line-through;
+    text-decoration-style: dashed;
+    text-decoration-color:green;
+    text-decoration-thickness: 1px;
+    text-transform: capitalize;
+    text-indent: 50px;
+    letter-spacing: 2px;
+    word-spacing: 1px;
+    line-height:1;
+    text-shadow: 1px 1px 2px black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.p2{
+    padding:10px;
+    background-color: white;
+    color:blue;
+    margin:10px;
+    text-align: left;
+    text-decoration-line: overline;
+    text-decoration-style:dotted;
+    text-decoration-color:black;
+    text-decoration-thickness: 2px;
+    text-transform: lowercase;
+    text-indent: 40px;
+    letter-spacing: 3px;
+    word-spacing: 2px;
+    word-spacing: 2px;
+    line-height:1.1;
+    font-family: 'Times New Roman', Times, serif;
+}
+.p3{
+    padding:10px;
+    background-color:white;
+    color:green;
+    margin:10px;
+    text-align:end;
+    /*  text-decoration-line: underline;
+    text-decoration-style:double;
+    text-decoration-color:crimson;
+    text-decoration-thickness: 3px; */ 
+    
+    /* short-hand:line,style,color,thickness.  */
+    text-decoration: underline crimson double 3px;
+    /* text-align-last: center;
+    direction: ltr; */
+    text-transform: uppercase;
+    text-indent: 60px;
+    letter-spacing: 4px;
+    word-spacing: 3px;
+    line-height:1.3;
+    text-shadow: 1px 1px 2px black;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.p4{
+    padding:10px;
+    background-color:white;
+    color:hsl(0,100%,50%,0.8);
+    margin:10px;
+    text-align:justify;
+    text-decoration-line:underline;
+    text-decoration-style:wavy;
+    text-decoration-color:blue;
+    text-decoration-thickness: 4px;
+    text-indent: 70px;
+    letter-spacing: 5px;
+    word-spacing: 4px;
+    line-height:1.4;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: italic;
+    font-size: 1em;
+    /*1em=16px; 0.5 em=8px; 
+     white-space:nowrap;
+    white-space:normal;
+    white-space:pre-line;   */
+
+}
+span{
+    color: black;
+    vertical-align: baseline;
+}  
+/* .s1{
+    vertical-align:baseline;
+}
+.s2{
+    vertical-align:text-bottom;
+}
+.s3{
+    vertical-align: text-top;
+}  */ 
+

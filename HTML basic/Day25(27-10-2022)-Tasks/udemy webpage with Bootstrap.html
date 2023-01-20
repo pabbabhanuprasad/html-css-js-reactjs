@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introduction to Bootstrap</title>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+  <style>
+    .container {
+      margin: 8%;
+    }
+
+    .inner {
+      overflow: hidden;
+    }
+
+    .inner img {
+      transition: all 1.5s ease;
+    }
+
+    .inner:hover img {
+      transform: scale(1.5);
+    }
+
+    .collaps bi {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* log in form */
+    .form {
+      padding: 0px;
+      margin: 0px;
+      box-sizing: border-box;
+    }
+
+    .container1 {
+      background-color: white;
+    }
+
+    .row1 {
+      background: white;
+      border-radius: 80px;
+      box-shadow: 12px 12px 22px gray;
+    }
+
+    .img-fluid {
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+
+    .btn1 {
+      border: none;
+      outline: none;
+      height: 40px;
+      width: 100%;
+      background-color: black;
+      color: white;
+      border-radius: 3px;
+      font-weight: bold;
+    }
+
+    .btn1:hover {
+      background: white;
+      border: 1px solid;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm navbar ">
+    <div class="container-fluid bg-white">
+      <a class="navbar-brand" href="javascript:void(0)">
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGUAAAB8CAMAAABHe46uAAAAaVBMVEUAAAD///+ampr39/fr6+uIiIjw8PD8/PyxsbFNTU3Nzc1mZmY+Pj60tLSWlpZpaWne3t7k5OTAwMCnp6eQkJBwcHBgYGAfHx9+fn7Y2NhVVVUpKSl4eHgWFhYkJCS6urpFRUU2NjYMDAxicjlcAAADuElEQVRogb2a52KrMAyF7bAJGcwAme37P+RNkzAs2SaAdM/f4nz1kuVjCUmiNK8jkRr/LAgQbiFeihkpTSs+ytgofiV6sfUlFyM1PBTnMYYIh4WSClXmL1dQYgCJOCgQIjYMlCOEWCZ/McVBENsvLaUkCFLQUza4Ky45xceQyvb9MsoWU47kFLy+xNbaYBFF0xVzdFlK0cxKaG+xhLKfN/ULKb8Q8jvVYgEFhmL7VllKCSHEnFWsoNRze7KIooawyL6GF1MUyP67Jqso7fSUrKZE5tSIinLeW85GAkpYe3lmDcEUFJ0C50/BbErgx7nnXS61t0vti9XPivJx+hXXW7St86PuYz3FyS7n8XotQwMoSPcRDAXlDn2so6Rwd//pkOHxcDc4yXiDwLRhSqM5o1667ZVYEsQHw4d/qhQOpDilpak43J1upIqb7cOnvMBIySaaPgdjk8W72jBSim6NgXL5ovEMhTqK881/OEsFpvhTI71ANaT4J3pI15uBwgL5zE1PQVuYSs2IUnBBxG6goOsblZJ0NGIokSPSZbzGPCZIl3u8KC4TJFf2vi24rtCQRQm+rlykQtEdWuuVSJXCAlHS5ydlxwLJpUppp5vM149UKQEHBPh+Qt45IIkEFJYVdoeUKwdFAgrLtNSQwhLzobMs0I2XQjDZFRqna7VOElI4lliJKNV0o9lCbqzgyF1yRDlPN5qtHaJw5BXoiYSB8b8o/2fE8OxzJOHIAhLkN6OnDojCcR4jH1OwZHzQVhAsKTKK/Pl0m/m6QArL+YJOZJ77EdiXQmPaE+gMKExZcgYoDxbKCVCYbscblcKT8qvuv2C7VJ5Uf4yJIlqFQmyKDSrHFJ7dr2CE9jGNSlXQUyRHsvTRqekpHKlyr01H0TylEiqJPw4Jy3VsUNW8KKxD9tSD1VPqlL9PNTbT8i33TWG58/dKOkeRlRJ2FPzMTajeHdUUnpDJG/xkHifuJX+g8IXMUo4ceLZTxh1TuDpTyjGFy7n2VQqP5+dJlcJzMgeQIn/oIaFEFFwcsladfancNMjPmVRHoc4z+lxZpdAeZ4PdC+5mpKm5b6JQPsWMPGX08k6Wz4wNDEShWs7KZQxXEUw/vn8l106hCZvwzQKLwAACDpm2hmS1m+XJLyhTmOvEQoQQU9WNCVPl8WevudneFMNxCbGptkdXShJB19PXpnGaSixjBRFa0J62si6DHdp+X0H00nhFJ+ayzeP4u0pf7mWtubp70VX8tMV9onavCYtD2x72d1PR1T8ILSd+of1VAQAAAABJRU5ErkJggg=="
+          alt="udemy logo" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mynavbar">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:void(0)">Catagories</a>
+            <form class="d-flex">
+              <i class="bi bi-search"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
+                viewBox="0 0 16 16">
+                <!-- <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" /> -->
+              </svg>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:void(0)">Udemy business</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:void(0)">Teach on Udemy</a>
+          </li>
+        </ul>
+        <!-- <form class="d-flex">
+          <i class="bi bi-search"></i>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
+            viewBox="0 0 16 16">
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+          </svg> -->
+        <input class="form-control me-2" type="text" placeholder="Search">
+        <button type="button" class="btn btn-info">Login</button>
+        <button class="btn btn-dark" type="button">Signin</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="row">
+          <div class="col-6">
+            column3
+            <!-- </div>
+        </div> -->
+            <img src="../Image1/Udemy2.jpg" alt="udemy" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Carousel-->
+  <!-- <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="container fluid">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../Image1/nature1.jpg" class="d-block w-100" alt="Bike1">
+        </div>
+        <div class="carousel-item">
+          <img src="../Image1/nature2.jpeg" class="d-block w-100" alt="Bike2">
+        </div>
+        <div class="carousel-item">
+          <img src="../Image1/nature2.jpeg" class="d-block w-100" alt="Bike3">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div> -->
+
+
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../Image1/front end image1.png" class="d-block w-100" alt="front end image1">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>First slide label</h5>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../Image1/front end image2.jpg" class="d-block w-100" alt="front end image2">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../Image1/front end image3.jpg" class="d-block w-100" alt="front end image3">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="row">
+          <div class="col-6">
+            column3
+            <!-- </div>
+        </div> -->
+            <img src="../Image1/Udemy2.jpg" alt="udemy" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <br>
+  <div class="container">
+    <h2>A broad selection of courses</h2>
+    <p class="lead">
+      Choose from 204,000 online video courses with new additions published every month
+    </p>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-3 ">
+        <div class="card shadow " style="width: 18rem;">
+          <div class="inner">
+            <img src="../Image1/nature1.jpg" class="card-img-top" alt="nature1">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Python course:</h5>
+            <p class="card-text">Learn Python: The Complete Python Programming CourseLearn A-Z everything about Python,
+              from the basics, to advanced topics like Python GUI, Python Data Analysis, and more!Rating: 4.3 out of
+              53667 reviews14.5 total hours146 lecturesAll LevelsCurrent price: ₹649Original price: ₹3,399</p>
+            <a href="#" class="btn btn-primary">know more....</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3 ">
+        <div class="card shadow" style="width: 18rem;">
+          <div class="inner">
+            <img src="../Image1/nature2.jpeg" class="card-img-top" alt="nature2">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Python course:</h5>
+            <p class="card-text">Learn Python: The Complete Python Programming CourseLearn A-Z everything about Python,
+              from the basics, to advanced topics like Python GUI, Python Data Analysis, and more!Rating: 4.3 out of
+              53667 reviews14.5 total hours146 lecturesAll LevelsCurrent price: ₹649Original price: ₹3,399</p>
+            <a href="#" class="btn btn-primary">know more....</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3 ">
+        <div class="card shadow " style="width: 18rem;">
+          <div class="inner">
+            <img src="../Image1/nature1.jpg" class="card-img-top" alt="nature1">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Python course:</h5>
+            <p class="card-text">Learn Python: The Complete Python Programming CourseLearn A-Z everything about Python,
+              from the basics, to advanced topics like Python GUI, Python Data Analysis, and more!Rating: 4.3 out of
+              53667 reviews14.5 total hours146 lecturesAll LevelsCurrent price: ₹649Original price: ₹3,399</p>
+            <a href="#" class="btn btn-primary">know more....</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3 ">
+        <div class="card shadow" style="width: 18rem;">
+          <div class="inner">
+            <img src="../Image1/nature2.jpeg" class="card-img-top" alt="nature2">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Python course:</h5>
+            <p class="card-text">Learn Python: The Complete Python Programming CourseLearn A-Z everything about Python,
+              from the basics, to advanced topics like Python GUI, Python Data Analysis, and more!Rating: 4.3 out of
+              53667 reviews14.5 total hours146 lecturesAll LevelsCurrent price: ₹649Original price: ₹3,399</p>
+            <a href="#" class="btn btn-primary">know more....</a>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="col-12 col-md-6 col-lg-3 ">
+        <div class="card shadow">
+          <div class="inner">
+            <img src="../Image1/nature1.jpg" class="card-img-top" alt="nature1">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Python course:</h5>
+            <p class="card-text">Learn Python: The Complete Python Programming CourseLearn A-Z everything about Python,
+              from the basics, to advanced topics like Python GUI, Python Data Analysis, and more!Rating: 4.3 out of
+              53667 reviews14.5 total hours146 lecturesAll LevelsCurrent price: ₹649Original price: ₹3,399</p>
+            <a href="#" class="btn btn-primary">know more....</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card shadow">
+          <div class="inner">
+            <img src="../Image1/nature2.jpeg" class="card-img-top" alt="nature2">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Python course:</h5>
+            <p class="card-text">Learn Python: The Complete Python Programming CourseLearn A-Z everything about Python,
+              from the basics, to advanced topics like Python GUI, Python Data Analysis, and more!Rating: 4.3 out of
+              53667 reviews14.5 total hours146 lecturesAll LevelsCurrent price: ₹649Original price: ₹3,399</p>
+            <a href="#" class="btn btn-primary">know more....</a>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-4"><strong>Learn in-demand skills with over 204,000 video coursesLearn at your
+          own pace, with lifetime access on mobile and desktop</strong></div>
+      <div class="col-12 col-md-6 col-lg-4"><strong>Choose courses taught by real-world experts</strong></div>
+      <div class="col-12 col-md-6 col-lg-4"><strong>Learn at your own pace, with lifetime access on mobile and
+          desktop</strong></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card shadow  gap-10" style="width: 20rem;">
+          <div class="inner">
+            <img src="../Image1/nature1.jpg" class="card-img-top" alt="nature1">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Python course:</h5>
+            <p class="card-text">Learn Python: The Complete Python Programming CourseLearn A-Z everything about Python,
+              from the basics, to advanced topics like Python GUI, Python Data Analysis, and more!Rating: 4.3 out of
+              53667 reviews14.5 total hours146 lecturesAll LevelsCurrent price: ₹649Original price: ₹3,399</p>
+            <a href="#" class="btn btn-primary">know more....</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card gap-10" style="width: 20rem;">
+          <div class="inner">
+            <img src="../Image1/nature2.jpeg" class="card-img-top" alt="nature2">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Python course:</h5>
+            <p class="card-text">Learn Python: The Complete Python Programming CourseLearn A-Z everything about Python,
+              from the basics, to advanced topics like Python GUI, Python Data Analysis, and more!Rating: 4.3 out of
+              53667 reviews14.5 total hours146 lecturesAll LevelsCurrent price: ₹649Original price: ₹3,399</p>
+            <a href="#" class="btn btn-primary">know more....</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card shadow" style="width: 20rem;">
+          <div class="inner">
+            <img src="../Image1/nature1.jpg" class="card-img-top" alt="nature1">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Python course:</h5>
+            <p class="card-text">Learn Python: The Complete Python Programming CourseLearn A-Z everything about Python,
+              from the basics, to advanced topics like Python GUI, Python Data Analysis, and more!Rating: 4.3 out of
+              53667 reviews14.5 total hours146 lecturesAll LevelsCurrent price: ₹649Original price: ₹3,399</p>
+            <a href="#" class="btn btn-primary">know more....</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-1">
+        <div class="card  gap-10" style="width: 20rem;">
+          <div class="inner">
+            <img src="../Image1/nature2.jpeg" class="card-img-top" alt="nature2">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Python course:</h5>
+            <p class="card-text">Learn Python: The Complete Python Programming CourseLearn A-Z everything about Python,
+              from the basics, to advanced topics like Python GUI, Python Data Analysis, and more!Rating: 4.3 out of
+              53667 reviews14.5 total hours146 lecturesAll LevelsCurrent price: ₹649Original price: ₹3,399</p>
+            <a href="#" class="btn btn-primary">know more....</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <section class="form my-1 mx-1">
+    <div class="container container1">
+      <div class="row1 no-gutters">
+        <div class="col-lg-4">
+          <img src="../Image1/nature1.jpg" class="img-fluid" alt="nature1">
+        </div>
+        <div class="col-lg-8 px-2 py-2">
+          <h1 class="font-weight-bold py-2">Logo</h1>
+          <h4>Sign into your account</h4>
+          <form>
+            <div class="form-row">
+              <div class="col-lg-7">
+                <input type="email" placeholder="Email-Address" class="form-control my-1 p-1">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-lg-7">
+                <input type="password" placeholder="**********" class="form-control my-1 p-1">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-lg-7">
+                <button type="button" class="btn1 mt-3 mb-5">Log in</button>
+              </div>
+            </div>
+            <a href="#">Forgot Password</a>
+            <p>Do not have an account? <a href="#">Register</a></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>

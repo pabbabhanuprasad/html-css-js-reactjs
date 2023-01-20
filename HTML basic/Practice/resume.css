@@ -1,0 +1,20 @@
+.heading{
+    margin-left: 5%;
+    text-decoration: underline;
+}
+#preTag{
+    margin-left: 1%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#hrTag{
+    height:1px;
+}
+table,th,td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+}
+#photo{
+    width: 200px;
+    height: 250px;
+}

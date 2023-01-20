@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    
+    <!--
+    <link rel="stylesheet" href="./practice1.css"></link>
+     <style>
+        #parent{
+            letter-spacing: -2px
+        }
+        .class1{
+            font-size: 30px;
+            font-weight: 700;
+            color: red;
+        }
+        #child1{
+            font-size: 30px;
+            font-weight: 700;
+            color: orangered;
+        }
+        #child2{
+            font-size: 30px;
+            font-weight: 700;
+            color: blue;
+        }
+        #child3{
+            font-size: 30px;
+            font-weight: 700;
+            color: green;
+        }  
+    </style> 
+</head>
+
+<body>
+    <p>The element and title attribute was used to associate a full-text explanation with an acronym. <span
+            style="font-weight: bold;">The element has been deprecated in HTML5 and should be used instead.</span></p>
+    <p id="parent"><span style="font-size: 40px;font-weight:bold;color: blue;">G</span>
+        <span class="class1">o</span>
+        <span id="child1">o</span>
+        <span id="child2">g</span>
+        <span id="child3">l</span>
+        <span class="class1">e</span>
+    </p>
+</body>
+-->
+    <style>
+        label {
+            display: block;
+            font: 1rem 'Fira Sans', sans-serif;
+        }
+
+        input,
+        label {
+            margin: .4rem 0;
+        }
+    </style>
+</head>
+
+<body>
+    <label for="meeting-time">Choose a time for your appointment:</label>
+
+    <input type="datetime-local" id="meeting-time" name="meeting-time" value="2022-10-12T19:30" min="2022-10-07T00:00"
+        max="2022-10-14T00:00">
+    <br>    
+    <input type="datetime-local">
+</body>
+
+</html>

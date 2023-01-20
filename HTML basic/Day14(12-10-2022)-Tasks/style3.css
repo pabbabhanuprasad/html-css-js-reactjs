@@ -1,0 +1,37 @@
+.main{
+    background-color: aliceblue;
+    text-align: center;
+    color: blue;
+
+}
+.main::first-letter{
+        color:red;
+}
+
+body{
+    background-color: rgb(221, 229, 236);
+}
+#subheading{
+    color:crimson
+}
+#subheading::first-letter{
+    color:green
+}
+h1::before{
+    content:"**"
+}
+h1::after{
+    content:"**"
+}
+.submit{
+    background-color: rgb(39, 39, 163);
+}
+.reset{
+    background-color: rgb(151, 43, 43);
+}
+#sample{
+    color:darkgreen
+}
+input:focus{
+    background-color: blueviolet;
+}

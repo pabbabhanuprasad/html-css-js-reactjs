@@ -1,0 +1,31 @@
+.container{
+    border:2px solid black;
+    padding:30px;
+}
+
+#table, tr {
+    width:80%;
+    border: 2px solid #ddd;
+    border-collapse: collapse;
+}
+th{
+    padding:20px;
+}
+th,td{
+    border: 2px solid #ddd;
+    padding:10px;
+    background-color:rgb(241, 11, 153);
+}
+th{
+    background-color: rgb(238, 141, 160);
+}
+th::selection{
+    background-color:white;
+}
+tr:nth-child(even) td {
+    background-color:lightcoral;
+}
+td:hover{
+    background-color: darkolivegreen;
+    color:#ddd
+}

@@ -1,0 +1,80 @@
+/* pseudo class slectors */
+a.link{
+    color:brown;
+}
+
+a:visited{
+    color:green;
+}
+a:hover{
+    color:yellow;
+}
+a:active{
+    color:blue;
+}
+#para:hover{
+    color:brown;
+}
+.para:hover{
+    color:chartreuse;
+}
+.hidden{
+    display:none;
+}
+div:hover .hidden{
+ display:block;
+}
+h2:hover{
+    color:blueviolet;
+}
+div{
+    border:2px solid black;
+}
+div ul li:first-child{
+    color:blue;
+}
+
+li:last-child{
+    color:brown;
+}
+
+li:nth-child(2){
+    color:green;
+}
+
+li:nth-child(3){
+    color:orange;
+}
+
+input:focus{
+    background-color: blueviolet;
+}
+
+/* pseudo element selectors */
+
+h2.subheading::first-letter{
+    color:darkcyan
+}
+
+h2::before{
+    content:"++"
+}
+
+h2::after{
+    content:"++"
+}
+
+p::selection{
+    background-color: brown;
+    color:blue
+}
+
+p::first-line{
+    color:green;
+}
+
+p::first-letter{
+    color:crimson;
+    font-family:'Times New Roman', Times, serif
+    
+}

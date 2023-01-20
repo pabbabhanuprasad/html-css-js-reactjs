@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    width: 300px;
+    height: 400px;
+    background-color: blueviolet;
+    border: 3px solid black;
+    background-image: radial-gradient(45deg green 30%, blue 40%, yellow 30%, brown 30%);
+    /* background-color: red; */
+}
