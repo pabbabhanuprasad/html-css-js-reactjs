@@ -35,12 +35,19 @@ const calculate =()=>{
   const value=calc.slice(0,-1);
   setCalc(value);
  }
+ const clear=()=>{
+  if(calc == ''){
+    return;
+  }
+  const value=calc.slice(0,0);
+  setCalc(value);
+ }
 
   return (
     <div className="App">
     <div className="calculator">
       <div className="display">
-        {result ?<span>({result})</span>:""}
+        {result ?<span></span>:""}
         {calc || "0"}
       </div>
       <div className="operators">
@@ -50,11 +57,13 @@ const calculate =()=>{
         <button onClick={()=>updateCalc('*')}>*</button>
 
         <button onClick={deleteLast}>DEL</button>
+        <button onClick={clear}>C</button>
       </div>
       <div className="digits">
         {createDigits()}
         <button onClick={()=>updateCalc('0')}>0</button>
         <button onClick={()=>updateCalc('.')}>.</button>
+
         <button onClick={calculate}>=</button>
       </div>
     </div>

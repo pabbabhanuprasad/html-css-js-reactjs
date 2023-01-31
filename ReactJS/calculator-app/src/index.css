@@ -37,7 +37,7 @@ button{
   appearance: none;
   border:none;
   outline:none;
-  color:#fff;
+  color:black;
   font-size: 20px;
 padding:15px;
 cursor:pointer;
@@ -60,5 +60,5 @@ background-color: blue;
 .digits button{
   flex:1 1 33.33%;
   max-width: 33.33%;
-  background-color: black;
+  background-color:white;
 }
